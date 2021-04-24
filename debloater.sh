@@ -1,66 +1,53 @@
 #!/bin/bash
 
-su root
-
-echo off
-
-su root
 echo Disabling Apple Push Notification Service daemon
 # Disable Apple Push Notification Service daemon
 # https://apple.stackexchange.com/questions/92214/how-to-disable-apple-push-notification-service-apsd-on-os-x-10-8
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.apsd.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.apsd.plist
 
 echo Disabling CalendarAgent
 # Disable CalendarAgent
-su root
-launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plist
+sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plist
 
 echo Disabling NetBIOS
 # Disable NetBIOS daemon (netbiosd)
-su root
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.netbiosd.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.netbiosd.plist
 
 echo Disabling Location Services
 # Disable Location Services (locationd)
-su root
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.locationd.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.locationd.plist
 
 echo Disabling Notification Center
 # Disable Notification Center
 # https://apple.stackexchange.com/questions/106149/how-do-i-permanently-disable-notification-center-in-mavericks
-su root
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 echo Disabling Quicklook
 # Disable QuickLook
 # https://superuser.com/questions/617658/quicklooksatellite-mac-os-high-cpu-use
-su root
-launchctl unload -w /System/Library/LaunchAgents/com.apple.quicklook.*
+sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.quicklook.*
 
 echo Disabling Spotlight
 # Disable Spotlight
 # http://osxdaily.com/2011/12/10/disable-or-enable-spotlight-in-mac-os-x-lion/
-su root
-launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 
 echo Disabling Mavericks Unicast ARP Cache Validation Script
 # Disabling Maverick's Unicast ARP Cache Validation Script (thanks, MMV!)
-bash <(curl -Ls http://git.io/6YzLCw)
+sudo bash <(curl -Ls http://git.io/6YzLCw)
 
 echo Disabling Bonjour
 # Disable Bonjour Script (thanks MMV!)
-bash <(curl -Ls http://git.io/q9j5Zw)
+sudo bash <(curl -Ls http://git.io/q9j5Zw)
 
 # Launch Agents
 
 echo Disabling Game Center
 # Disable Game Center daemon (gamed)
-su root
-rm -rf /System/Library/LaunchAgents/com.apple.gamed.plist
+sudo rm -rf /System/Library/LaunchAgents/com.apple.gamed.plist
 # Disable Airplay Mirroring
 # http://www.ehcho.com/guide/disable-airplay-mirroring/
-su root
-rm -rf /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
+sudo rm -rf /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 
 
 # IMPORTANT: You will need to disable SIP aka Rootless in order to fully execute this script, you can reenable it after.
@@ -95,139 +82,105 @@ done
 
 echo Disabling Calendar
 # Disable AddressBook and Calendar
-su root
-rm -rf com.apple.AddressBook*                      
-rm -rf com.apple.CalendarAgent.plist               
+sudo rm -rf com.apple.AddressBook*                      
+sudo rm -rf com.apple.CalendarAgent.plist               
 
 echo Disabling iCloud Services
 # iCloud-related services
-su root
-rm -rf com.apple.iCloudUserNotifications.plist     
-rm -rf com.apple.icbaccountsd.plist                
-rm -rf com.apple.icloud.fmfd.plist                 
-rm -rf com.apple.cloud*                            
+sudo rm -rf com.apple.iCloudUserNotifications.plist     
+sudo rm -rf com.apple.icbaccountsd.plist                
+sudo rm -rf com.apple.icloud.fmfd.plist                 
+sudo rm -rf com.apple.cloud*                            
 
 echo Disabling Facetime
 # Disable Facetime
 su root
-rm -rf com.apple.imagent.plist                     
-rm -rf com.apple.IMLoggingAgent.plist              
+sudo rm -rf com.apple.imagent.plist                     
+sudo rm -rf com.apple.IMLoggingAgent.plist              
 
 echo Disabling Notification Center
 # Disable Notification Center
-su root
-rm -rf com.apple.notificationcenterui.plist        
-killall NotificationCenter
+sudo rm -rf com.apple.notificationcenterui.plist        
+sudo killall NotificationCenter
 
 
 # spindump (see also code below)
-su root
-rm -rf com.apple.spindump_agent.plist              
+sudo rm -rf com.apple.spindump_agent.plist              
 
 echo Disabling Safari
 # Disable Safari
-su root
-rm -rf com.apple.safaridavclient.plist             
-rm -rf com.apple.SafariNotificationAgent.plist     
+sudo rm -rf com.apple.safaridavclient.plist             
+sudo rm -rf com.apple.SafariNotificationAgent.plist     
 # in future versions of OS X
-su root
-rm -rf com.apple.SafariCloudHistoryPushAgent.plist 
+sudo rm -rf com.apple.SafariCloudHistoryPushAgent.plist 
 
 echo Disabling AirPlay
 # Disable Airplay
-su root
-rm -rf com.apple.AirPlayUIAgent.plist              
-rm -rf com.apple.AirPortBaseStationAgent.plist     
-rm -rf com.apple.bird.plist                        
-rm -rf com.apple.findmymacmessenger.plist          
-rm -rf com.apple.gamed.plist                       
-rm -rf com.apple.parentalcontrols.check.plist      
-rm -rf com.apple.soagent.plist                     
-rm -rf com.apple.SocialPushAgent.plist             
-rm -rf com.apple.DictationIM.plist                 
-rm -rf com.apple.Maps.pushdaemon.plist             
-rm -rf com.apple.locationmenu.plist                
-rm -rf com.apple.java.updateSharing.plist          
-rm -rf com.apple.appstoreupdateagent.plist         
-rm -rf com.apple.softwareupdate_notify_agent.plist 
-rm -rf com.apple.ScreenReaderUIServer.plist        
-rm -rf com.apple.speech.*                          
-launchctl unload -wF com.apple.AirPlayXPCHelper.plist
+sudo rm -rf com.apple.AirPlayUIAgent.plist              
+sudo rm -rf com.apple.AirPortBaseStationAgent.plist     
+sudo rm -rf com.apple.bird.plist                        
+sudo rm -rf com.apple.findmymacmessenger.plist          
+sudo rm -rf com.apple.gamed.plist                       
+sudo rm -rf com.apple.parentalcontrols.check.plist      
+sudo rm -rf com.apple.soagent.plist                     
+sudo rm -rf com.apple.SocialPushAgent.plist             
+sudo rm -rf com.apple.DictationIM.plist                 
+sudo rm -rf com.apple.Maps.pushdaemon.plist             
+sudo rm -rf com.apple.locationmenu.plist                
+sudo rm -rf com.apple.java.updateSharing.plist          
+sudo rm -rf com.apple.appstoreupdateagent.plist         
+sudo rm -rf com.apple.softwareupdate_notify_agent.plist 
+sudo rm -rf com.apple.ScreenReaderUIServer.plist        
+sudo rm -rf com.apple.speech.*                          
+sudo launchctl unload -wF com.apple.AirPlayXPCHelper.plist
 
 echo Disabling Notifications
 # Disable Apple push notification
-su root
-launchctl unload -wF com.apple.apsd.plist
+sudo launchctl unload -wF com.apple.apsd.plist
 
 echo Disabling FindMy
 # Removing FindMy
-su root
-launchctl unload -wF com.apple.icloud.findmydeviced.plist
-launchctl unload -wF com.apple.cloudfamilyrestrictionsd-mac.plist 
-launchctl unload -wF com.apple.mbicloudsetupd.plist
-launchctl unload -wF com.apple.findmymac.plist
-launchctl unload -wF com.apple.findmymacmessenger.plist
-launchctl unload -wF com.apple.locationd.plist
+sudo launchctl unload -wF com.apple.icloud.findmydeviced.plist
+sudo launchctl unload -wF com.apple.cloudfamilyrestrictionsd-mac.plist 
+sudo launchctl unload -wF com.apple.mbicloudsetupd.plist
+sudo launchctl unload -wF com.apple.findmymac.plist
+sudo launchctl unload -wF com.apple.findmymacmessenger.plist
+sudo launchctl unload -wF com.apple.locationd.plist
 
 echo Disabling Updates
 # Remove Updates
-su root
-launchctl unload -wF com.apple.softwareupdate*
+sudo launchctl unload -wF com.apple.softwareupdate*
 
 echo Diagnostics Services
 # Removing Diagnostics Services
-su root
-launchctl unload -wF com.apple.SubmitDiagInfo.plist 
-launchctl unload -wF com.apple.CrashReporterSupportHelper.plist 
-launchctl unload -wF com.apple.ReportCrash.Root.plist 
-launchctl unload -wF com.apple.GameController.gamecontrollerd.plist
+sudo launchctl unload -wF com.apple.SubmitDiagInfo.plist 
+sudo launchctl unload -wF com.apple.CrashReporterSupportHelper.plist 
+sudo launchctl unload -wF com.apple.ReportCrash.Root.plist 
+sudo launchctl unload -wF com.apple.GameController.gamecontrollerd.plist
 
 echo Disabling FTP
 # Not using FTP these days
-su root
-launchctl unload -wF com.apple.ftp-proxy.plist
+sudo launchctl unload -wF com.apple.ftp-proxy.plist
 
 echo Disabling spindump
 # Disable spindump (spindump is a tool used by various system components
 # to create hang reports and notify the user of application hangs)
-su root
-launchctl unload -wF com.apple.spindump.plist
-launchctl unload -wF com.apple.metadata.mds.spindump.plist
+sudo launchctl unload -wF com.apple.spindump.plist
+sudo launchctl unload -wF com.apple.metadata.mds.spindump.plist
 
 
 echo Disabling IPv6
 # Disable IPv6 - if not using it yet
 # Run this for each network interface (assuming they are called Wi-Fi and Ethernet)
-su root
-networksetup -setv6off Wi-Fi
-networksetup -setv6off Ethernet
-
-echo Disabling ContentCaching
-
-su root
- # ContentCaching
-TODISABLE+=(
-    'com.apple.AssetCache.builtin' \
-    'com.apple.AssetCacheLocatorService' \
-    'com.apple.AssetCacheManagerService' \
-    'com.apple.AssetCacheTetheratorService'
-    )
-
-# Biokit, touchid
-TODISABLE+=(
-    'com.apple.biokitaggdd' \
-    'com.apple.biometrickitd' \
-    'com.apple.touchbarserver'
-    ) 
+sudo networksetup -setv6off Wi-Fi
+sudo networksetup -setv6off Ethernet
 
 echo Optimizing Boot Configurations
-
-su root
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-defaults write -g QLPanelAnimationDuration -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
-defaults write com.apple.dock launchanim -bool false
+sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+sudo defaults write -g QLPanelAnimationDuration -float 0
+sudo defaults write com.apple.dock autohide-time-modifier -float 0
+sudo defaults write com.apple.dock launchanim -bool false
 sudo sysctl debug.lowpri_throttle_enabled=0
 
 echo Removing Phone Daemons
@@ -267,30 +220,29 @@ sudo launchctl remove com.apple.safaridavclient
 
 echo Removing apps associated with removed services and daemons.
 
-su root
-rm -rf /Applications/Facetime.app
-rm -rf /Applications/Safari.app
-rm -rf /Applications/Maps.app
-rm -rf /Applications/Find \My.app
-rm -rf /Applications/Address \Book.app
-rm -rf /Applications/Calendar.app
-rm -rf /Applications/Calculator.app
-rm -rf /Applications/Dictionary.app
-rm -rf /Applications/Photos.app
-rm -rf /Applications/Reminders.app
-rm -rf /Applications/App \Store.app
-rm -rf /Applications/iTunes.app
-rm -rf /Applications/Mail.app
-rm -rf /Applications/Books.app
-rm -rf /Applications/Photo \Booth.app
-rm -rf /Applications/Podcasts.app
-rm -rf /Applications/Notes.app
-rm -rf /Applications/Contacts.app
-rm -rf /Applications/Preview.app
-rm -rf /Applications/Dashboard.app
-rm -rf /Applications/Time \Machine.app
-rm -rf /Applications/Stickies.app
-rm -rf /Applications/Mission \Control.app
-rm -rf /Applications/Chess.app
-rm -rf /Applications/Font \Book.app
-rm -rf /Applications/Automator.app
+sudo rm -rf /Applications/Facetime.app
+sudo rm -rf /Applications/Safari.app
+sudo rm -rf /Applications/Maps.app
+sudo rm -rf /Applications/Find \My.app
+sudo rm -rf /Applications/Address \Book.app
+sudo rm -rf /Applications/Calendar.app
+sudo rm -rf /Applications/Calculator.app
+sudo rm -rf /Applications/Dictionary.app
+sudo rm -rf /Applications/Photos.app
+sudo rm -rf /Applications/Reminders.app
+sudo rm -rf /Applications/App \Store.app
+sudo rm -rf /Applications/iTunes.app
+sudo rm -rf /Applications/Mail.app
+sudo rm -rf /Applications/Books.app
+sudo rm -rf /Applications/Photo \Booth.app
+sudo rm -rf /Applications/Podcasts.app
+sudo rm -rf /Applications/Notes.app
+sudo rm -rf /Applications/Contacts.app
+sudo rm -rf /Applications/Preview.app
+sudo rm -rf /Applications/Dashboard.app
+sudo rm -rf /Applications/Time \Machine.app
+sudo rm -rf /Applications/Stickies.app
+sudo rm -rf /Applications/Mission \Control.app
+sudo rm -rf /Applications/Chess.app
+sudo rm -rf /Applications/Font \Book.app
+sudo rm -rf /Applications/Automator.app
