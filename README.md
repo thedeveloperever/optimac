@@ -11,7 +11,7 @@
 
 Click the green "Code" dropdown menu, and then click "Download Zip"
 
-Then you go into your Downloads folder and double click the macosdebloater-macosdebloater zip file.
+Then you go into your Downloads folder and double click the macosdebloater-scripts.zip file.
 
 Then search "Terminal" in Launchpad.
 
@@ -19,15 +19,15 @@ Click it and do the following commands:
 
 cd Downloads/
 
-cd macosdebloater-scripts
+cd macosdebloater-scripts/
 
 chmod 777 macosdebloater.sh
 
 ./macosdebloater.sh
 
-And after it finishes, you need to reboot. You now have a debloated MacOS system!
+# You are all done! After it finishes, you need to reboot. You now have a debloated MacOS system!
 
-Features
+# Features
 
 Removes Notes, iTunes, App Store, Safari, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
 
