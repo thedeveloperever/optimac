@@ -269,3 +269,5 @@ rm -rf /Applications/Books.app
 rm -rf /Applications/Photo \Booth.app
 rm -rf /Applications/Podcasts.app
 rm -rf /Applications/Notes.app
+rm -rf /Applications/Contacts.app
+rm -rf /Applications/Preview.app
