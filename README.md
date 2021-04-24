@@ -1,3 +1,7 @@
+# MacOS Debloater
+
+This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!
+
 # WARNING:
 
 Make sure to have an extra Web Browser and remember to back up your system!
@@ -5,10 +9,6 @@ Make sure to have an extra Web Browser and remember to back up your system!
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, Safari and more.
 
 Also this is a new project, therefore it is still a work in progress!
-
-# MacOS Debloater
-
-This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!
 
 # How to use:
 
