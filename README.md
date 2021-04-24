@@ -3,9 +3,29 @@
 # If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, Safari and more.
 # Also this is a new project, therefore it is still a work in progress!
 
-MacOS Debloater
+# MacOS Debloater
 
-This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!
+# This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!
+
+# How to use:
+
+Click the green "Code" dropdown menu, and then click "Download Zip"
+
+Then you go into your Downloads folder and double click the macosdebloater-macosdebloater zip file.
+
+Then search "Terminal" in Launchpad.
+
+Click it and do the following commands:
+
+*cd Downloads/
+
+*cd macosdebloater-macosdebloater
+
+*chmod 777 debloater.sh
+
+*./debloater.sh
+
+And after it finishes, you need to reboot. You now have a debloated MacOS system!
 
 Features
 
