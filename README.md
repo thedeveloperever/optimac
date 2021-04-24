@@ -19,11 +19,11 @@ Click it and do the following commands:
 
 cd Downloads/
 
-cd macosdebloater-macosdebloater
+cd macosdebloater-scripts
 
-chmod 777 debloater.sh
+chmod 777 macosdebloater.sh
 
-./debloater.sh
+./macosdebloater.sh
 
 And after it finishes, you need to reboot. You now have a debloated MacOS system!
 
