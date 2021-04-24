@@ -252,3 +252,9 @@ sudo rm -rf '/Applications/Game Center.app'
 sudo rm -rf '/Applications/DVD Player.app'
 sudo rm -rf '/Applications/Image Capture.app'
 sudo rm -rf '/Applications/TextEdit.app'
+
+echo 
+echo 
+echo All Complete!
+echo 
+echo 
