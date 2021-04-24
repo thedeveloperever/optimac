@@ -259,3 +259,10 @@ rm -rf /Applications/Podcasts.app
 rm -rf /Applications/Notes.app
 rm -rf /Applications/Contacts.app
 rm -rf /Applications/Preview.app
+rm -rf /Applications/Dashboard.app
+rm -rf /Applications/Time \Machine.app
+rm -rf /Applications/Stickies.app
+rm -rf /Applications/Mission \Control.app
+rm -rf /Applications/Chess.app
+rm -rf /Applications/Font \Book.app
+rm -rf /Applications/Automator.app
