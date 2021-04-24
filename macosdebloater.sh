@@ -264,3 +264,8 @@ rm -rf /Applications/Photos.app
 rm -rf /Applications/Reminders.app
 rm -rf /Applications/App \Store.app
 rm -rf /Applications/iTunes.app
+rm -rf /Applications/Mail.app
+rm -rf /Applications/Books.app
+rm -rf /Applications/Photo \Booth.app
+rm -rf /Applications/Podcasts.app
+rm -rf /Applications/Notes.app
