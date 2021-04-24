@@ -253,3 +253,13 @@ sudo launchctl remove com.apple.SafariHistoryServiceAgent
 sudo launchctl remove com.apple.SafariLaunchAgent
 sudo launchctl remove com.apple.SafariPlugInUpdateNotifier
 sudo launchctl remove com.apple.safaridavclient
+
+echo Removing apps associated with removed services and daemons.
+rm -rf /Applications/Facetime.app
+rm -rf /Applications/Safari.app
+rm -rf /Applications/Maps.app
+rm -rf /Applications/FindMy.app
+rm -rf /Applications/Address \Book.app
+rm -rf /Applications/Calendar.app
+rm -rf /Applications/Calculator.app
+rm -rf /Applications/Dictionary.app
