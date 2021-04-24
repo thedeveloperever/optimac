@@ -2,9 +2,6 @@
 
 su root
 
-echo Removing iCloud, Calendar, Location, Notification, AirPlay, and Facetime Daemons.
-# Utility functions
-
 echo Disabling Apple Push Notification Service daemon
 # Disable Apple Push Notification Service daemon
 # https://apple.stackexchange.com/questions/92214/how-to-disable-apple-push-notification-service-apsd-on-os-x-10-8
