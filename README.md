@@ -21,11 +21,11 @@ cd Downloads/
 
 cd macosdebloater-scripts/
 
-chmod 777 macosdebloater.sh
+chmod a+x debloat.sh
 
-./macosdebloater.sh
+./debloat.sh
 
-# You are all done! After it finishes, you need to reboot. You now have a debloated MacOS system!
+# You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
 
 # Features
 
