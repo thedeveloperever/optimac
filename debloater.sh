@@ -223,26 +223,32 @@ echo Removing apps associated with removed services and daemons.
 sudo rm -rf /Applications/Facetime.app
 sudo rm -rf /Applications/Safari.app
 sudo rm -rf /Applications/Maps.app
-sudo rm -rf /Applications/Find \My.app
-sudo rm -rf /Applications/Address \Book.app
+sudo rm -rf '/Applications/Find My.app'
+sudo rm -rf '/Applications/Address Book.app'
 sudo rm -rf /Applications/Calendar.app
 sudo rm -rf /Applications/Calculator.app
 sudo rm -rf /Applications/Dictionary.app
 sudo rm -rf /Applications/Photos.app
 sudo rm -rf /Applications/Reminders.app
-sudo rm -rf /Applications/App \Store.app
+sudo rm -rf '/Applications/App Store.app'
 sudo rm -rf /Applications/iTunes.app
 sudo rm -rf /Applications/Mail.app
 sudo rm -rf /Applications/Books.app
-sudo rm -rf /Applications/Photo \Booth.app
+sudo rm -rf '/Applications/Photo Booth.app'
 sudo rm -rf /Applications/Podcasts.app
 sudo rm -rf /Applications/Notes.app
 sudo rm -rf /Applications/Contacts.app
 sudo rm -rf /Applications/Preview.app
 sudo rm -rf /Applications/Dashboard.app
-sudo rm -rf /Applications/Time \Machine.app
+sudo rm -rf '/Applications/Time Machine.app'
 sudo rm -rf /Applications/Stickies.app
-sudo rm -rf /Applications/Mission \Control.app
+sudo rm -rf '/Applications/Mission Control.app'
 sudo rm -rf /Applications/Chess.app
-sudo rm -rf /Applications/Font \Book.app
+sudo rm -rf '/Applications/Font Book.app'
 sudo rm -rf /Applications/Automator.app
+sudo rm -rf /Applications/Messages.app
+sudo rm -rf /Applications/iBooks.app
+sudo rm -rf '/Applications/Game Center.app'
+sudo rm -rf '/Applications/DVD Player.app'
+sudo rm -rf '/Applications/Image Capture.app'
+sudo rm -rf '/Applications/TextEdit.app'
