@@ -263,3 +263,7 @@ rm -rf /Applications/Address \Book.app
 rm -rf /Applications/Calendar.app
 rm -rf /Applications/Calculator.app
 rm -rf /Applications/Dictionary.app
+rm -rf /Applications/Photos.app
+rm -rf /Applications/Reminders.app
+rm -rf /Applications/App \Store.app
+rm -rf /Applications/iTunes.app
