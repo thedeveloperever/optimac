@@ -8,6 +8,8 @@ This is a project that allows you to remove all extra processes on MacOS and Mac
 
 Features
 
+Removes Notes, iTunes, App Store, Safari, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
+
 Removes Extra Phone daemons
 
 Removes Siri, speech, and help daemons
