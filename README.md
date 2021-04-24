@@ -1,6 +1,6 @@
 # WARNING:
 # Make sure to back up your system!
-# If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, safari and more.
+# If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, Safari and more.
 # Also this is a new project, therefore it is still a work in progress!
 
 MacOS Debloater
