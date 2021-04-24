@@ -2,10 +2,12 @@
 
 su root
 
+echo off
+
 echo Disabling Apple Push Notification Service daemon
 # Disable Apple Push Notification Service daemon
 # https://apple.stackexchange.com/questions/92214/how-to-disable-apple-push-notification-service-apsd-on-os-x-10-8
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.apsd.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.apsd.plist
 
 echo Disabling CalendarAgent
 # Disable CalendarAgent
@@ -13,26 +15,26 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plist
 
 echo Disabling NetBIOS
 # Disable NetBIOS daemon (netbiosd)
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.netbiosd.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.netbiosd.plist
 
 echo Disabling Location Services
 # Disable Location Services (locationd)
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.locationd.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.locationd.plist
 
 echo Disabling Notification Center
 # Disable Notification Center
 # https://apple.stackexchange.com/questions/106149/how-do-i-permanently-disable-notification-center-in-mavericks
-sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 echo Disabling Quicklook
 # Disable QuickLook
 # https://superuser.com/questions/617658/quicklooksatellite-mac-os-high-cpu-use
-sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.quicklook.*
+launchctl unload -w /System/Library/LaunchAgents/com.apple.quicklook.*
 
 echo Disabling Spotlight
 # Disable Spotlight
 # http://osxdaily.com/2011/12/10/disable-or-enable-spotlight-in-mac-os-x-lion/
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 
 echo Disabling Mavericks Unicast ARP Cache Validation Script
 # Disabling Maverick's Unicast ARP Cache Validation Script (thanks, MMV!)
@@ -46,10 +48,10 @@ bash <(curl -Ls http://git.io/q9j5Zw)
 
 echo Disabling Game Center
 # Disable Game Center daemon (gamed)
-sudo rm -rf /System/Library/LaunchAgents/com.apple.gamed.plist
+rm -rf /System/Library/LaunchAgents/com.apple.gamed.plist
 # Disable Airplay Mirroring
 # http://www.ehcho.com/guide/disable-airplay-mirroring/
-sudo rm -rf /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
+rm -rf /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 
 
 # IMPORTANT: You will need to disable SIP aka Rootless in order to fully execute this script, you can reenable it after.
@@ -64,10 +66,9 @@ TODISABLE=('com.apple.security.keychainsyncingoveridsproxy' 'com.apple.personad'
 for agent in "${TODISABLE[@]}"
 do
     {
-        sudo launchctl unload -w /System/Library/LaunchAgents/${agent}.plist
         launchctl unload -w /System/Library/LaunchAgents/${agent}.plist
     } &> /dev/null
-   sudo rm -rf ${agent}.plist 
+   rm -rf ${agent}.plist 
     echo "[OK] Agent ${agent} disabled"
 done
 
@@ -77,10 +78,9 @@ TODISABLE=('com.apple.netbiosd' 'com.apple.preferences.timezone.admintool' 'com.
 for daemon in "${TODISABLE[@]}"
 do
     {
-        sudo launchctl unload -w /System/Library/LaunchDaemons/${daemon}.plist
         launchctl unload -w /System/Library/LaunchDaemons/${daemon}.plist
     } &> /dev/null
-    sudo rm -rf ${daemon}.plist
+    rm -rf ${daemon}.plist
     echo "[OK] Daemon ${daemon} disabled"
 done
 
