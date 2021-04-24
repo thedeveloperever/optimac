@@ -1,10 +1,11 @@
 # WARNING:
+# Make sure to back up your system!
 # If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, safari and more.
-# Also this is a new project, it is still work in progress!
+# Also this is a new project, therefore it is still a work in progress!
 
 MacOS Debloater
 
-This is a project that allows you to remove all extra processes on MacOS and Mac OSX.
+This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!
 
 Features
 
