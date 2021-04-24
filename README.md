@@ -17,13 +17,13 @@ Then search "Terminal" in Launchpad.
 
 Click it and do the following commands:
 
-*cd Downloads/
+cd Downloads/
 
-*cd macosdebloater-macosdebloater
+cd macosdebloater-macosdebloater
 
-*chmod 777 debloater.sh
+chmod 777 debloater.sh
 
-*./debloater.sh
+./debloater.sh
 
 And after it finishes, you need to reboot. You now have a debloated MacOS system!
 
