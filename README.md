@@ -4,7 +4,7 @@ This is a project that allows you to remove all extra apps, bloat, and preinstal
 
 # WARNING:
 
-Make sure to have an extra Web Browser and remember to back up your system!
+Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave.
 
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, Safari and more.
 
