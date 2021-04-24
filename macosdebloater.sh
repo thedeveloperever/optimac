@@ -44,16 +44,12 @@ bash <(curl -Ls http://git.io/q9j5Zw)
 
 # Launch Agents
 
-DISABLE_DIR=/System/Library/LaunchAgentsDisabled
-sudo mkdir ${DISABLE_DIR}
-
 echo Disabling Game Center
 # Disable Game Center daemon (gamed)
-sudo mv /System/Library/LaunchAgents/com.apple.gamed.plist ${DISABLE_DIR}
-
+sudo rm -rf /System/Library/LaunchAgents/com.apple.gamed.plist
 # Disable Airplay Mirroring
 # http://www.ehcho.com/guide/disable-airplay-mirroring/
-sudo mv /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist ${DISABLE_DIR}
+sudo rm -rf /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist
 
 
 # IMPORTANT: You will need to disable SIP aka Rootless in order to fully execute this script, you can reenable it after.
@@ -71,7 +67,7 @@ do
         sudo launchctl unload -w /System/Library/LaunchAgents/${agent}.plist
         launchctl unload -w /System/Library/LaunchAgents/${agent}.plist
     } &> /dev/null
-    sudo mv /System/Library/LaunchAgents/${agent}.plist /System/Library/LaunchAgents/${agent}.plist.bak
+   sudo rm -rf ${agent}.plist 
     echo "[OK] Agent ${agent} disabled"
 done
 
@@ -84,69 +80,61 @@ do
         sudo launchctl unload -w /System/Library/LaunchDaemons/${daemon}.plist
         launchctl unload -w /System/Library/LaunchDaemons/${daemon}.plist
     } &> /dev/null
-    sudo mv /System/Library/LaunchDaemons/${daemon}.plist /System/Library/LaunchDaemons/${daemon}.plist.bak
+    sudo rm -rf ${daemon}.plist
     echo "[OK] Daemon ${daemon} disabled"
 done
 
-cd /
-mkdir RemovedFiles
-cd RemovedFiles
-mkdir System-Library-LaunchAgents
-FLA=/RemovedFiles/System-Library-LaunchAgents/
-cd /System/Library/LaunchAgents/
-
-
 echo Disabling Calendar
 # Disable AddressBook and Calendar
-mv com.apple.AddressBook*                      $FLA
-mv com.apple.CalendarAgent.plist               $FLA
+rm -rf com.apple.AddressBook*                      
+rm -rf com.apple.CalendarAgent.plist               
 
 echo Disabling iCloud Services
 # iCloud-related services
-mv com.apple.iCloudUserNotifications.plist     $FLA
-mv com.apple.icbaccountsd.plist                $FLA
-mv com.apple.icloud.fmfd.plist                 $FLA
-mv com.apple.cloud*                            $FLA
+rm -rf com.apple.iCloudUserNotifications.plist     
+rm -rf com.apple.icbaccountsd.plist                
+rm -rf com.apple.icloud.fmfd.plist                 
+rm -rf com.apple.cloud*                            
 
 echo Disabling Facetime
 # Disable Facetime
-mv com.apple.imagent.plist                     $FLA
-mv com.apple.IMLoggingAgent.plist              $FLA
+rm -rf com.apple.imagent.plist                     
+rm -rf com.apple.IMLoggingAgent.plist              
 
 echo Disabling Notification Center
 # Disable Notification Center
-mv com.apple.notificationcenterui.plist        $FLA
+rm -rf com.apple.notificationcenterui.plist        
 killall NotificationCenter
 
 
 # spindump (see also code below)
-mv com.apple.spindump_agent.plist              $FLA
+rm -rf com.apple.spindump_agent.plist              
 
 echo Disabling Safari
 # Disable Safari
-mv com.apple.safaridavclient.plist             $FLA
-mv com.apple.SafariNotificationAgent.plist     $FLA
+rm -rf com.apple.safaridavclient.plist             
+rm -rf com.apple.SafariNotificationAgent.plist     
 # in future versions of OS X
-mv com.apple.SafariCloudHistoryPushAgent.plist $FLA
+rm -rf com.apple.SafariCloudHistoryPushAgent.plist 
 
 echo Disabling AirPlay
 # Disable Airplay
-mv com.apple.AirPlayUIAgent.plist              $FLA
-mv com.apple.AirPortBaseStationAgent.plist     $FLA
-mv com.apple.bird.plist                        $FLA
-mv com.apple.findmymacmessenger.plist          $FLA
-mv com.apple.gamed.plist                       $FLA
-mv com.apple.parentalcontrols.check.plist      $FLA
-mv com.apple.soagent.plist                     $FLA
-mv com.apple.SocialPushAgent.plist             $FLA
-mv com.apple.DictationIM.plist                 $FLA
-mv com.apple.Maps.pushdaemon.plist             $FLA
-mv com.apple.locationmenu.plist                $FLA
-mv com.apple.java.updateSharing.plist          $FLA
-mv com.apple.appstoreupdateagent.plist         $FLA
-mv com.apple.softwareupdate_notify_agent.plist $FLA
-mv com.apple.ScreenReaderUIServer.plist        $FLA
-mv com.apple.speech.*                          $FLA
+rm -rf com.apple.AirPlayUIAgent.plist              
+rm -rf com.apple.AirPortBaseStationAgent.plist     
+rm -rf com.apple.bird.plist                        
+rm -rf com.apple.findmymacmessenger.plist          
+rm -rf com.apple.gamed.plist                       
+rm -rf com.apple.parentalcontrols.check.plist      
+rm -rf com.apple.soagent.plist                     
+rm -rf com.apple.SocialPushAgent.plist             
+rm -rf com.apple.DictationIM.plist                 
+rm -rf com.apple.Maps.pushdaemon.plist             
+rm -rf com.apple.locationmenu.plist                
+rm -rf com.apple.java.updateSharing.plist          
+rm -rf com.apple.appstoreupdateagent.plist         
+rm -rf com.apple.softwareupdate_notify_agent.plist 
+rm -rf com.apple.ScreenReaderUIServer.plist        
+rm -rf com.apple.speech.*                          
 launchctl unload -wF com.apple.AirPlayXPCHelper.plist
 
 echo Removing All extra launch daemons
