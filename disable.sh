@@ -1,6 +1,6 @@
 #!/bin/bash
 
-@echo off
+su root
 
 echo Removing iCloud, Calendar, Location, Notification, AirPlay, and Facetime Daemons.
 # Utility functions
@@ -57,7 +57,6 @@ sudo mv /System/Library/LaunchAgents/com.apple.gamed.plist ${DISABLE_DIR}
 # Disable Airplay Mirroring
 # http://www.ehcho.com/guide/disable-airplay-mirroring/
 sudo mv /System/Library/LaunchAgents/com.apple.AirPlayUIAgent.plist ${DISABLE_DIR}
-fi
 
 
 # IMPORTANT: You will need to disable SIP aka Rootless in order to fully execute this script, you can reenable it after.
@@ -92,7 +91,6 @@ do
     echo "[OK] Daemon ${daemon} disabled"
 done
 
-su root
 cd /
 mkdir RemovedFiles
 cd RemovedFiles
