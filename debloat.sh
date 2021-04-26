@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo Removing extra language files
+sudo find / \( -name *.lproj -and \! \( -name English.lproj -or -name en.lproj -or -name en_AU.lproj -or -name en_CA.lproj -or -name en_GB.lproj -or -name en_US.lproj \) \) -exec rm -rf {} \;
+
 echo Disabling Apple Push Notification Service daemon
 # Disable Apple Push Notification Service daemon
 # https://apple.stackexchange.com/questions/92214/how-to-disable-apple-push-notification-service-apsd-on-os-x-10-8
