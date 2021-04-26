@@ -12,19 +12,17 @@ Also this is a new project, therefore it is still a work in progress!
 
 # How to use:
 
-Click the green "Code" dropdown menu, and then click "Download Zip"
+[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.1/debloat.sh)
 
-Then you go into your Downloads folder and double click the macosdebloater-scripts.zip file.
+[Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
-Then search "Terminal" in Launchpad.
+Search "Terminal" in Launchpad.
 
 Click it and do the following commands:
 
-cd Downloads/
+cd Downloads/ *or wherever you downloaded the file*
 
-cd macosdebloater-scripts/
-
-chmod a+x debloat.sh
+chmod 777 debloat.sh
 
 ./debloat.sh
 
