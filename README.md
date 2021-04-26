@@ -12,7 +12,7 @@ Also this is a new project, therefore it is still a work in progress!
 
 # *How to use:*
 
-# [Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.1/debloat.sh)
+# [Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.2/debloat.sh)
 
 # [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
