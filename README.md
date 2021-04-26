@@ -2,7 +2,7 @@
 
 *This is a project that allows you to remove all extra apps, bloat, and preinstalled junk off of your Mac!*
 
-# *WARNING*:
+# *WARNING:*
 
 Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave.
 
@@ -10,7 +10,7 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 
 Also this is a new project, therefore it is still a work in progress!
 
-# *How to use*:
+# *How to use:*
 
 # [Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.1/debloat.sh)
 
@@ -28,7 +28,7 @@ chmod 777 debloat.sh
 
 You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
 
-# *Features*:
+# *Features:*
 
 Removes Notes, iTunes, App Store, Safari, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
 
