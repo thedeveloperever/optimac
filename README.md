@@ -8,11 +8,15 @@ Make sure to have an extra web browser and remember to back up your system! For 
 
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, and a lot more.
 
+# Download Here!
+
+
+[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.2/debloat.sh)
+
+[Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
+
+
 # *How to use:*
-
-# [Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.2/debloat.sh)
-
-# [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
 Search "Terminal" in Launchpad.
 
