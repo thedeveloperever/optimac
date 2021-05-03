@@ -4,11 +4,9 @@
 
 # *WARNING:*
 
-Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave.
+Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave. This script does remove Safari.
 
-If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, Safari and more.
-
-Also this is a new project, therefore it is still a work in progress!
+If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, and a lot more.
 
 # *How to use:*
 
@@ -74,4 +72,4 @@ Removes Quicklook and Spotlight
 
 Removes Bonjour
 
-Removes 30 to 50+ extra processes, which saves you around 400 to 600 of RAM.
+Removes 30 to 50+ extra processes, which saves you around 400MB to 2GB of RAM.
