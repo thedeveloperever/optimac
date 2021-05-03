@@ -4,6 +4,8 @@
 
 # *WARNING:*
 
+*I AM NOT LIABLE FOR ANY DAMAGES MADE TO YOUR COMPUTER, PAST THE POINT OF DOWNLOADING YOU ARE ON YOUR OWN!*
+
 Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave. This script does remove Safari.
 
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, and a lot more.
