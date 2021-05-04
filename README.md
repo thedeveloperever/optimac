@@ -10,6 +10,15 @@ Make sure to have an extra web browser and remember to back up your system! For 
 
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, and a lot more.
 
+# Proof
+
+| Stock MacOS    | Optimized MacOS          |
+| -----------    | ------------------------ |
+| Booting:2M     | Booting:30-45s           |
+| Login:30s      | Login:5-10s              |
+| Desktop:10s    | Desktop:2s               |
+
+
 # Download Here!
 
 
