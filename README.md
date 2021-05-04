@@ -13,7 +13,7 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 # Download Here!
 
 
-[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.2/debloat.sh)
+[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.3/debloat.sh)
 
 [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
