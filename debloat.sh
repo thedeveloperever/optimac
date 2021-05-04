@@ -1,5 +1,23 @@
 #!/bin/bash
 
+echo Disabling FileVault
+sudo /usr/bin/fdesetup disable
+
+echo Disable Animations
+sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+sudo defaults write -g QLPanelAnimationDuration -float 0
+sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+sudo defaults write com.apple.finder DisableAllAnimations -bool true
+sudo defaults write com.apple.dock launchanim -bool false
+sudo defaults write com.apple.dock expose-animation-duration -float 0.1
+sudo defaults write com.apple.Dock autohide-delay -float 0
+
+echo Tweaking Keyboard
+sudo defaults write NSGlobalDomain KeyRepeat -int 0
+
+echo Disabling SMB browing
+sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+
 echo Disabling SafeSleep
 sudo pmset -a hibernatemode 0
 cd /private/var/vm/
