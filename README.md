@@ -29,6 +29,8 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 
 # *How to use:*
 
+# *Make sure to turn off SIP!*
+
 Search "Terminal" in Launchpad.
 
 Click it and do the following commands:
