@@ -1,6 +1,6 @@
 # MacOS Debloater
 
-*This is a project that allows you to save space, and remove all extra apps, bloat, plus the preinstalled junk off of your Mac!*
+*This is a project that allows you to save space, remove all extra apps, bloat, and the preinstalled junk on your Mac!*
 
 # *WARNING:*
 
