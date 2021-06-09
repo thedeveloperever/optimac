@@ -18,6 +18,7 @@ do
  ;;
  esac
 done
+clear
 while true
 do
  read -r -p "Disable FireVault? [Y/n] " input
