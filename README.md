@@ -1,6 +1,6 @@
 # MacOS Debloater
 
-*This is a project that allows you to save space, remove all extra apps, bloat, and the preinstalled junk on your Mac!*
+*This is a project that allows you to save space and speed up your Mac!*
 
 # *WARNING:*
 
