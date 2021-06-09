@@ -6,8 +6,6 @@
 
 *I AM NOT LIABLE FOR ANY DAMAGES MADE TO YOUR COMPUTER, PAST THE POINT OF DOWNLOADING YOU ARE ON YOUR OWN!*
 
-Make sure to have an extra web browser and remember to back up your system! For maximum security I would recommend Firefox or Brave. This script does remove Safari.
-
 If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running this script, as it removes iCloud, and a lot more.
 
 # Proof
@@ -22,14 +20,14 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 # Download Here!
 
 
-[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.3/debloat.sh)
+[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.5/debloat.sh)
 
 [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
 
 # *How to use:*
 
-# *Make sure to turn off SIP!*
+# *Make sure to turn off SIP or System Integrity Protection!*
 
 Search "Terminal" in Launchpad.
 
@@ -45,15 +43,13 @@ You are all done! After it finishes, it will automatically reboot for you. You n
 
 # *Features:*
 
-Removes Notes, iTunes, App Store, Safari, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
+Removes Notes, iTunes, App Store, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
 
 Removes Extra Phone daemons
 
 Removes Siri, speech, and help daemons
 
 Removes ContentCaching
-
-Removes IPv6
 
 Removes FTP and spindump
 
@@ -77,8 +73,6 @@ Removes Notifications
 
 Removes Crash reporting
 
-Removes Safari
-
 Removes iCloud integration
 
 Removes Location Services
@@ -89,4 +83,4 @@ Removes Quicklook and Spotlight
 
 Removes Bonjour
 
-Removes 30 to 50+ extra processes, which saves you around 400MB to 2GB of RAM.
+Removes over 75 extra processes, which saves you around 400MB to 2GB of RAM.
