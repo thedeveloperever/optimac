@@ -13,7 +13,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
-
+esac
 echo Disabling FileVault
 sudo /usr/bin/fdesetup disable
 clear
@@ -30,7 +30,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
-
+esac
 echo Disabling Animations
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 sudo defaults write -g QLPanelAnimationDuration -float 0
@@ -55,6 +55,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Disabling SMB browing
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 clear
@@ -71,6 +72,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Removing Voice files
 cd /System/Library/Speech/
 sudo rm -rf Voices/*
@@ -88,6 +90,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Removing system logs
 sudo rm -rf /private/var/log/*
 clear
@@ -104,6 +107,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Removing temp files
 cd /private/var/tmp/
 sudo rm -rf TM*
@@ -120,7 +124,9 @@ case $input in
        ;;
     *)
  echo Going to next prompt...
- ;;echo Removing iPhone and iPad backups
+ ;;
+esac
+echo Removing iPhone and iPad backups
 sudo rm -rf ~/Library/Application Support/MobileSync/Backup/*
 clear
 
@@ -136,6 +142,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Clearing cached files
 sudo rm -rf ~/Library/Caches/*
 
@@ -151,6 +158,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Disabling bonjour
 sudo bash <(curl -Ls http://git.io/6YzLCw)
 sudo bash <(curl -Ls http://git.io/q9j5Zw)
@@ -168,6 +176,8 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
+
 TODISABLE=('com.apple.findmymacmessenger.plist' 'com.apple.apsd.plist' 'com.apple.netbiosd.plist' 'com.apple.locationd.plist' 'com.apple.preferences.timezone.admintool' 'com.apple.preferences.timezone.auto' 'com.apple.remotepairtool' 'com.apple.rpmuxd' 'com.apple.security.FDERecoveryAgent' 'com.apple.icloud.findmydeviced' 'com.apple.findmymacmessenger' 'com.apple.familycontrols' 'com.apple.findmymac' 'com.apple.SubmitDiagInfo' 'com.apple.screensharing' 'com.apple.appleseed.fbahelperd' 'com.apple.apsd' 'com.apple.AOSNotificationOSX' 'com.apple.FileSyncAgent.sshd' 'com.apple.ManagedClient.cloudconfigurationd' 'com.apple.ManagedClient.enroll' 'com.apple.ManagedClient' 'com.apple.ManagedClient.startup' 'com.apple.iCloudStats' 'com.apple.locationd' 'com.apple.mbicloudsetupd' 'com.apple.laterscheduler' 'com.apple.awacsd' 'com.apple.eapolcfg_auth' 'com.apple.familycontrols' 'com.apple.DictationIM.plist' 'com.apple.bird.plist' 'com.apple.parentalcontrols.check.plist' 'com.apple.SocialPushAgent.plist' 'com.apple.soagent.plist' 'com.apple.spindump_agent.plist' 'com.apple.IMLoggingAgent.plist' 'com.apple.imagent.plist' 'com.apple.spindump_agent.plist' 'com.apple.AirPlayUIAgent.plist' 'com.apple.gamed.plist' 'com.apple.notificationcenterui.plist' 'com.apple.CalendarAgent.plist' 'com.apple.metadata.mds.plist' 'com.apple.quicklook.*' 'com.apple.security.keychainsyncingoveridsproxy' 'com.apple.personad' 'com.apple.passd' 'com.apple.screensharing.MessagesAgent' 'com.apple.CommCenter-osx' 'com.apple.Maps.mapspushd' 'com.apple.Maps.pushdaemon' 'com.apple.photoanalysisd' 'com.apple.telephonyutilities.callservicesd' 'com.apple.AirPlayUIAgent' 'com.apple.AirPortBaseStationAgent' 'com.apple.CalendarAgent' 'com.apple.DictationIM' 'com.apple.iCloudUserNotifications' 'com.apple.familycircled' 'com.apple.familycontrols.useragent' 'com.apple.familynotificationd' 'com.apple.gamed' 'com.apple.icloud.findmydeviced.findmydevice-user-agent' 'com.apple.icloud.fmfd' 'com.apple.imagent' 'com.apple.cloudfamilyrestrictionsd-mac' 'com.apple.cloudpaird' 'com.apple.cloudphotosd' 'com.apple.DictationIM' 'com.apple.assistant_service' 'com.apple.CallHistorySyncHelper' 'com.apple.CallHistoryPluginHelper' 'com.apple.AOSPushRelay' 'com.apple.IMLoggingAgent' 'com.apple.geodMachServiceBridge' 'com.apple.syncdefaultsd' 'com.apple.security.cloudkeychainproxy3' 'com.apple.security.idskeychainsyncingproxy' 'com.apple.security.keychain-circle-notification' 'com.apple.sharingd' 'com.apple.appleseed.seedusaged' 'com.apple.cloudd' 'com.apple.assistantd' 'com.apple.parentalcontrols.check' 'com.apple.parsecd' 'com.apple.identityservicesd' 'com.apple.DictationIM.plist' 'com.apple.locationmenu.plist' 'com.apple.java.updateSharing.plist' 'com.apple.appstoreupdateagent.plist' 'com.apple.softwareupdate_notify_agent.plist' 'com.apple.ScreenReaderUIServer.plist' 'com.apple.speech.*' 'com.apple.AirPlayXPCHelper.plist ' 'com.apple.mbicloudsetupd.plist' 'com.apple.softwareupdate*' 'com.apple.SubmitDiagInfo.plist' 'com.apple.CrashReporterSupportHelper.plist' 'com.apple.ReportCrash.Root.plist' 'com.apple.GameController.gamecontrollerd.plist' 'com.apple.ftp-proxy.plist' 'com.apple.metadata.mds.spindump.plist' 'com.apple.CallHistoryPluginHelper' 'com.apple.AddressBook.abd' 'com.apple.ap.adprivacyd' 'com.apple.ReportPanic' 'com.apple.ReportCrash' 'com.apple.ReportCrash.Self' 'com.apple.DiagnosticReportCleanup.plist' 'com.apple.siriknowledged' 'com.apple.helpd' 'com.apple.mobiledeviceupdater' 'com.apple.screensharing.MessagesAgent' 'com.apple.TrustEvaluationAgent' 'com.apple.iTunesHelper.launcher' 'com.apple.softwareupdate_notify_agent' 'com.apple.appstoreagent' 'com.apple.familycircled')
 
 for agent in "${TODISABLE[@]}"
@@ -202,6 +212,7 @@ case $input in
     *)
  echo Going to next prompt...
  ;;
+esac
 echo Removing apps associated with removed services and daemons.
 
 sudo rm -rf /Applications/Facetime.app
