@@ -202,28 +202,6 @@ do
 done
 echo Clearing cached files
 sudo rm -rf ~/Library/Caches/*
-
-while true
-do
- read -r -p "Disable Bonjour? [Y/n] " input
- 
- case $input in
-     [yY][eE][sS]|[yY])
- echo "Yes"
- break
- ;;
-     [nN][oO]|[nN])
- echo "No"
- break
-        ;;
-     *)
- echo "Invalid input..."
- ;;
- esac
-done
-echo Disabling bonjour
-sudo bash <(curl -Ls http://git.io/6YzLCw)
-sudo bash <(curl -Ls http://git.io/q9j5Zw)
 clear
 
 while true
