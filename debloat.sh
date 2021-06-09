@@ -2,6 +2,24 @@
 
 while true
 do
+ read -r -p "Do you wish to continue? This script can remove services that may be required by your work or school, and could be harmful if you don't know what you are doing. [Y/n] " input
+ 
+ case $input in
+     [yY][eE][sS]|[yY])
+ echo "Yes"
+ break
+ ;;
+     [nN][oO]|[nN])
+ echo "No"
+ break
+        ;;
+     *)
+ echo "Invalid input..."
+ ;;
+ esac
+done
+while true
+do
  read -r -p "Disable FireVault? [Y/n] " input
  
  case $input in
