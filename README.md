@@ -36,18 +36,15 @@ Click it and do the following commands:
 ```
 cd Downloads/macosdebloater-scripts
 ```
-
-
-
+```
+chmod 777 debloat.sh
+```
 ```
 ./debloat.sh
 ```
-Replace
-```
-Downloads/macosdebloater-scripts
 
-```
-with the file you downloaded and where you put it.
+*Tip*
+Replace "cd Downloads/macosdebloater-scripts" with the file you downloaded and where you put it.
 
 
 You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
