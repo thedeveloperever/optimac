@@ -4,9 +4,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.3     | :white_check_mark: |
-| 0.2     | :x:                |
+| 0.2     | :white_check_mark: |
 | 0.1     | :x:                |
 ## Reporting a Vulnerability
 
-Report bugs yemen.
+Report bugs with the Issues tab in the ribbon.
