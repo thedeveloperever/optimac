@@ -232,7 +232,7 @@ clear
 
 while true
 do
- read -r -p “Optimize Boot configurations? [Y/n] " input
+ read -r -p 'Optimize Boot configurations? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -267,7 +267,7 @@ clear
 
 while true
 do
- read -r -p “Disable IPv6? [Y/n] " input
+ read -r -p 'Disable IPv6? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -294,7 +294,7 @@ clear
 
 while true
 do
- read -r -p “Remove Phone applications and daemons? [Y/n] " input
+ read -r -p 'Remove Phone applications and daemons? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -324,7 +324,7 @@ clear
 
 while true
 do
- read -r -p “Disable Crash reports? [Y/n] “ input
+ read -r -p 'Disable Crash reports? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -357,7 +357,7 @@ clear
 
 while true
 do
- read -r -p “Disable Siri, knowledge and help? [Y/n] " input
+ read -r -p 'Disable Siri, knowledge and help? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -389,7 +389,7 @@ clear
 
 while true
 do
- read -r -p “Disable spindump? [Y/n] " input
+ read -r -p 'Disable spindump? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -417,7 +417,7 @@ clear
 
 while true
 do
- read -r -p “Disable FTP? [Y/n] " input
+ read -r -p 'Disable FTP? [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -445,7 +445,7 @@ clear
 
 while true
 do
- read -r -p "Remove over 100 daemons and agents? (WARNING, REMOVES ICLOUD AND MORE!) [Y/n] " input
+ read -r -p 'Remove over 100 daemons and agents? (WARNING, REMOVES ICLOUD AND MORE!) [Y/n] ' input
  
  case $input in
      [yY][eE][sS]|[yY])
@@ -547,6 +547,46 @@ sudo rm -rf '/Applications/Utilities/Script Editor.app'
 sudo rm -rf /Applications/Utilities/Grab.app
 sudo rm -rf /Applications/Utilities/Console.app
 sudo rm -rf '/Applications/Utilities/Bluetooth File Exchange.app'
+
+sudo rm -rf /System/Applications/Facetime.app
+sudo rm -rf /System/Applications/Maps.app
+sudo rm -rf /System/Applications/Find My.app
+sudo rm -rf '/System/Applications/Address Book.app'
+sudo rm -rf /System/Applications/Calendar.app
+sudo rm -rf /System/Applications/Calculator.app
+sudo rm -rf /System/Applications/Dictionary.app
+sudo rm -rf /System/Applications/Photos.app
+sudo rm -rf /System/Applications/Reminders.app
+sudo rm -rf '/System/Applications/App Store.app'
+sudo rm -rf /System/Applications/iTunes.app
+sudo rm -rf /System/Applications/Mail.app
+sudo rm -rf /System/Applications/Books.app
+sudo rm -rf '/System/Applications/Photo Booth.app'
+sudo rm -rf /System/Applications/Podcasts.app
+sudo rm -rf /System/Applications/Notes.app
+sudo rm -rf /System/Applications/Contacts.app
+sudo rm -rf /System/Applications/Dashboard.app
+sudo rm -rf '/System/Applications/Time Machine.app'
+sudo rm -rf /System/Applications/Stickies.app
+sudo rm -rf '/System/Applications/Mission Control.app'
+sudo rm -rf /System/Applications/Chess.app
+sudo rm -rf '/System/Applications/Font Book.app'
+sudo rm -rf /System/Applications/Automator.app
+sudo rm -rf /System/Applications/Messages.app
+sudo rm -rf /System/Applications/iBooks.app
+sudo rm -rf '/System/Applications/Game Center.app'
+sudo rm -rf '/System/Applications/DVD Player.app'
+sudo rm -rf '/System/Applications/Image Capture.app'
+sudo rm -rf '/System/Applications/Utilities/AirPort Utility.app'
+sudo rm -rf /System/Applications/Utilities/Grapher.app
+sudo rm -rf '/System/Applications/Utilities/VoiceOver Utility.app'
+sudo rm -rf '/System/Applications/Utilities/Migration Assistant.app'
+sudo rm -rf '/System/Applications/Utilities/Keychain Access.app'
+sudo rm -rf '/System/Applications/Utilities/Script Editor.app'
+sudo rm -rf /System/Applications/Utilities/Grab.app
+sudo rm -rf /System/Applications/Utilities/Console.app
+sudo rm -rf '/System/Applications/Utilities/Bluetooth File Exchange.app'
+
 
 sleep 1
 clear
