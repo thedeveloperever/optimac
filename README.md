@@ -11,6 +11,7 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 # Proof
 
 Mac Used: Late 2014 Mac Mini, Mid 2011 iMac 21.5 Inch
+
 MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 
 | Stock MacOS    | Optimized MacOS          |
