@@ -10,6 +10,9 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 
 # Proof
 
+Mac Used: Late 2014 Mac Mini, Mid 2011 iMac 21.5 Inch
+MacOS Versions used: 10.10, 10.11, 10.12, 10.13
+
 | Stock MacOS    | Optimized MacOS          |
 | -----------    | ------------------------ |
 | Booting:2M     | Booting:30-45s           |
@@ -20,7 +23,7 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 # Download Here!
 
 
-[Download](https://github.com/dotslashlevi/macosdebloater/releases/download/v0.5/debloat.sh)
+[Download](https://codeload.github.com/dotslashlevi/macosdebloater/zip/refs/tags/0.2.2)
 
 [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
@@ -29,12 +32,15 @@ If you use MacOS for iCloud/business purposes then I would NOT RECOMMEND running
 
 # *Make sure to turn off SIP or System Integrity Protection!*
 
-Search "Terminal" in Launchpad.
+Boot into Recovery Mode (Command + R) and go to the Utilities section, and find Terminal.
 
 Click it and do the following commands:
 
 ```
-cd Downloads/macosdebloater-scripts
+mount -uw /Volumes/Macintosh\ HD/
+```
+```
+cd /Volumes/Macintosh\ HD/Downloads/macosdebloater-scripts
 ```
 ```
 chmod 777 debloat.sh
@@ -44,7 +50,7 @@ chmod 777 debloat.sh
 ```
 
 *Tip*
-Replace "cd Downloads/macosdebloater-scripts" with the file you downloaded and where you put it.
+Replace "cd /Volumes/Macintosh\ HB/Downloads/macosdebloater-scripts" with your hard drive name and the file you downloaded.
 
 
 You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
