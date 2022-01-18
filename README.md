@@ -24,7 +24,7 @@ MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 # Download Here!
 
 
-[Download](https://codeload.github.com/dotslashlevi/macosdebloater/zip/refs/tags/0.2.2)
+[Download](https://codeload.github.com/dotslashlevi/macosdebloater/zip/refs/tags/0.2.3)
 
 [Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat.sh)
 
