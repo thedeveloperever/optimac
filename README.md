@@ -25,14 +25,16 @@ MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 
 # *How to use:*
 
-# *Make sure to turn off SIP or System Integrity Protection!*
+*Make sure to turn off SIP or System Integrity Protection! There are many tutorials, and this script is meant to be run on a live system, not recovery.*
 
 Find Terminal.
 
 Click it and do the following commands:
 
+
+
 ```
-mount -uw /Volumes/Macintosh\ HD/
+sudo mount -uw /
 ```
 ```
 cd Downloads/macosdebloater-scripts
@@ -47,6 +49,7 @@ chmod 777 *-macos-versions-deloat
 * = New or Old
 
 *Tip*
+
 Replace "Downloads/macosdebloater-scripts" with the file you downloaded.
 
 
