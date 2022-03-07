@@ -8,11 +8,10 @@ Mac Used: Late 2014 Mac Mini, Mid 2011 iMac 21.5 Inch
 
 MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 
-| Stock MacOS    | Optimized MacOS          |
-| -----------    | ------------------------ |
-| Booting:2M     | Booting:30-45s           |
-| Login:30s      | Login:5-10s              |
-| Desktop:10s    | Desktop:2s               |
+| Stock MacOS                             | Optimized MacOS          |
+| -----------                             | ------------------------ |
+| Booting: 2 Minutes                      | Booting: 15 seconds      |
+| Login to desktop: 30 to 60 seconds      | Login to desktop: 5-10s  |
 
 # *How to use:*
 
