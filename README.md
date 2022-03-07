@@ -14,15 +14,6 @@ MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 | Login:30s      | Login:5-10s              |
 | Desktop:10s    | Desktop:2s               |
 
-
-# Download Here!
-
-
-[Download](https://codeload.github.com/dotslashlevi/macosdebloater/zip/refs/tags/v1.1)
-
-[Raw Text](https://raw.githubusercontent.com/dotslashlevi/macosdebloater/scripts/debloat)
-
-
 # *How to use:*
 
 *Make sure to turn off SIP or System Integrity Protection! There are many tutorials, and this script is meant to be run on a live system, not recovery.*
@@ -31,8 +22,6 @@ Find Terminal.
 
 Click it and do the following commands:
 
-
-
 ```
 sudo mount -uw /
 ```
@@ -40,13 +29,17 @@ sudo mount -uw /
 cd Downloads/macosdebloater-scripts
 ```
 ```
-chmod 777 *-macos-versions-deloat
+chmod 777 *-macos-versions-debloat
 ```
 ```
-./*-macos-versions-deloat
+./old-macos-versions-debloat
 ```
 
-* = New or Old
+OR
+
+```
+./new-macos-versions-debloat
+```
 
 *Tip*
 
@@ -57,18 +50,18 @@ You are all done! After it finishes, it will automatically reboot for you. You n
 
 # *Features:*
 
-Removes Notes, iTunes, App Store, Reminders, Calculator, Calendar, Find My, and all of the extra apps most people don't need/use.
+Keeps All iCloud and security services, so you can even run it on your business computers. (If you have administrator of course)
 
-Removes Phone daemons
+Keeps security patches.
 
-Removes Siri, speech, and help daemons
+Tries to not break the OS while keeping it private and secure.
 
-Removes FTP and spindump
+Removes Notes, Reminders, Calculator, Calendar, Find My, Chess, Books, Mail, Messages, Preview, Siri, Contacts, and Dictionary.
 
-Removes Diagnostics Services
+Removes Siri and speech recognition daemons.
 
-Removes Crash reporting
+Removes spindump. (crash reporting)
 
-Removes Location Services
+Removes Diagnostics Services.
 
-Removes Bonjour
+Removes Location Services.
