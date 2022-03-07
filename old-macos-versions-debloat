@@ -1,0 +1,42 @@
+sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+sudo defaults write -g QLPanelAnimationDuration -float 0
+sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+sudo defaults write com.apple.finder DisableAllAnimations -bool true
+sudo defaults write com.apple.dock launchanim -bool false
+sudo defaults write com.apple.dock expose-animation-duration -float 0.1
+sudo defaults write com.apple.Dock autohide-delay -float 0
+sudo defaults write NSGlobalDomain KeyRepeat -int 0
+sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+sudo launchctl remove com.apple.CallHistoryPluginHelper
+sudo launchctl remove com.apple.ap.adprivacyd
+sudo launchctl remove com.apple.ReportPanic
+sudo launchctl remove com.apple.ReportCrash
+sudo launchctl remove com.apple.ReportCrash.Self
+sudo launchctl remove com.apple.DiagnosticReportCleanup
+sudo launchctl remove com.apple.siriknowledged
+sudo launchctl remove com.apple.helpd
+sudo launchctl remove com.apple.mobiledeviceupdater
+sudo launchctl remove com.apple.TrustEvaluationAgent
+sudo launchctl remove com.apple.spindump
+sudo launchctl remove com.apple.metadata.mds.spindump
+sudo launchctl remove com.apple.ftp-proxy
+sudo launchctl remove com.apple.assistantd
+sudo launchctl remove com.apple.identityservicesd
+sudo launchctl remove com.apple.softwareupdate
+sudo sysctl debug.lowpri_throttle_enabled=0
+
+echo Removing Extra Applications
+sudo rm -rf /Applications/Calculator.app
+sudo rm -rf /Applications/Calendar.app
+sudo rm -rf /Applications/Chess.app
+sudo rm -rf /Applications/Contacts.app
+sudo rm -rf /Applications/Dictionary.app
+sudo rm -rf /Applications/Books.app
+sudo rm -rf /Applications/Mail.app
+sudo rm -rf /Applications/Maps.app
+sudo rm -rf /Applications/Messages.app
+sudo rm -rf /Applications/Notes.app
+sudo rm -rf /Applications/Preview.app
+sudo rm -rf /Applications/Reminders.app
+sudo rm -rf /Applications/Siri.app
+sudo rm -rf /Applications/Stickies.app
