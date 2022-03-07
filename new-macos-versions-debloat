@@ -26,7 +26,7 @@ sudo launchctl remove com.apple.softwareupdate
 sudo sysctl debug.lowpri_throttle_enabled=0
 
 echo Removing Extra Applications
-sudo umount -w /Volumes/Macintosh\ HD/
+sudo mount -uw /
 sudo rm -rf /System/Applications/Calculator.app
 sudo rm -rf /System/Applications/Calendar.app
 sudo rm -rf /System/Applications/Chess.app
