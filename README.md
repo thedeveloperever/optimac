@@ -4,9 +4,9 @@
 
 # Proof
 
-Mac Used: Late 2014 Mac Mini, Mid 2011 iMac 21.5 Inch
+Mac Used: Late 2014 Mac Mini with USB SSD, Mid 2011 iMac 21.5 Inch with SSD Upgrade
 
-MacOS Versions used: 10.10, 10.11, 10.12, 10.13
+MacOS Versions tested: 10.10, 10.11, 10.13, 10.14, 11.0, 12.0
 
 | Stock MacOS                             | Optimized MacOS          |
 | -----------                             | ------------------------ |
@@ -15,7 +15,10 @@ MacOS Versions used: 10.10, 10.11, 10.12, 10.13
 
 # *How to use:*
 
-*Make sure to turn off SIP or System Integrity Protection! There are many tutorials, and this script is meant to be run on a live system, not recovery.*
+*Note:* (SIP is only in MacOS 10.11 El Capitan and newer, but only 10.13+ block most of the script.)
+
+Make sure to turn off SIP or System Integrity Protection! 
+There are many tutorials, and this script is meant to be run on a live system, not recovery.
 
 Find Terminal.
 
@@ -40,9 +43,7 @@ OR
 ./new-macos-versions-debloat
 ```
 
-*Tip*
-
-Replace "Downloads/macosdebloater-scripts" with the file you downloaded.
+*Note:* Replace "Downloads/macosdebloater-scripts" with the file you downloaded.
 
 
 You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
