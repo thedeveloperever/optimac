@@ -7,6 +7,7 @@ sudo defaults write com.apple.dock expose-animation-duration -float 0.1
 sudo defaults write com.apple.Dock autohide-delay -float 0
 sudo defaults write NSGlobalDomain KeyRepeat -int 0
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+sudo launchctl remove com.apple.geod
 sudo launchctl remove com.apple.CallHistoryPluginHelper
 sudo launchctl remove com.apple.ap.adprivacyd
 sudo launchctl remove com.apple.ReportPanic
