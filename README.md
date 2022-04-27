@@ -25,9 +25,6 @@ Find Terminal.
 Click it and do the following commands:
 
 ```
-sudo mount -w /
-```
-```
 cd Downloads/macosdebloater-scripts
 ```
 ```
