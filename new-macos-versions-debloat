@@ -1,3 +1,4 @@
+echo "Disabling all animations."
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 sudo defaults write -g QLPanelAnimationDuration -float 0
 sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -7,21 +8,39 @@ sudo defaults write com.apple.dock expose-animation-duration -float 0.1
 sudo defaults write com.apple.Dock autohide-delay -float 0
 sudo defaults write NSGlobalDomain KeyRepeat -int 0
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
-sudo sysctl debug.lowpri_throttle_enabled=0
+echo "Disabling geod."
 sudo launchctl remove com.apple.geod
+echo "Successful."
+echo "Disabling CallHistoryPluginHelper."
 sudo launchctl remove com.apple.CallHistoryPluginHelper
+echo "Successful."
+echo "Disabling adprivacyd."
 sudo launchctl remove com.apple.ap.adprivacyd
+echo "Successful."
+echo "Disabling ReportPanic."
 sudo launchctl remove com.apple.ReportPanic
+echo "Successful."
+echo "Disabling ReportCrash."
 sudo launchctl remove com.apple.ReportCrash
+echo "Successful."
+echo "Disabling ReportCrash.Self."
 sudo launchctl remove com.apple.ReportCrash.Self
+echo "Successful."
+echo "Disabling DiagnosticReportCleanup."
 sudo launchctl remove com.apple.DiagnosticReportCleanup
+echo "Successful."
+echo "Disabling helpd."
 sudo launchctl remove com.apple.helpd
-sudo launchctl remove com.apple.TrustEvaluationAgent
+echo "Successful."
+echo "Disabling spindump."
 sudo launchctl remove com.apple.spindump
+echo "Successful."
+echo "Disabling metadata.mds.spindump."
 sudo launchctl remove com.apple.metadata.mds.spindump
+echo "Successful."
+echo "Disabling ftp-proxy."
 sudo launchctl remove com.apple.ftp-proxy
-sudo launchctl remove com.apple.assistantd
-
+echo "Successful."
 # This will be removed in a future release due to it being near impossible to remove
 # applications in newer versions with most scripts, even while the system is in recovery mode.
 # Use CleanMyMacX for this if needed.
@@ -43,3 +62,7 @@ sudo rm -rf /System/Applications/Preview.app
 sudo rm -rf /System/Applications/Reminders.app
 sudo rm -rf /System/Applications/Siri.app
 sudo rm -rf /System/Applications/Stickies.app
+
+echo "Rebooting in 3 Seconds."
+sleep 3
+sudo reboot
