@@ -1,0 +1,84 @@
+#!/bin/bash
+
+echo "Disabling all animations."
+sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+sudo defaults write -g QLPanelAnimationDuration -float 0
+sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+sudo defaults write com.apple.finder DisableAllAnimations -bool true
+sudo defaults write com.apple.dock launchanim -bool false
+sudo defaults write com.apple.dock expose-animation-duration -float 0.1
+sudo defaults write com.apple.Dock autohide-delay -float 0
+sudo defaults write NSGlobalDomain KeyRepeat -int 0
+sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+echo "Disabling geod."
+sudo launchctl remove com.apple.geod
+echo "Successful."
+echo "Disabling CallHistoryPluginHelper."
+sudo launchctl remove com.apple.CallHistoryPluginHelper
+echo "Successful."
+echo "Disabling adprivacyd."
+sudo launchctl remove com.apple.ap.adprivacyd
+echo "Successful."
+echo "Disabling ReportPanic."
+sudo launchctl remove com.apple.ReportPanic
+echo "Successful."
+echo "Disabling ReportCrash."
+sudo launchctl remove com.apple.ReportCrash
+echo "Successful."
+echo "Disabling ReportCrash.Self."
+sudo launchctl remove com.apple.ReportCrash.Self
+echo "Successful."
+echo "Disabling DiagnosticReportCleanup."
+sudo launchctl remove com.apple.DiagnosticReportCleanup
+echo "Successful."
+echo "Disabling helpd."
+sudo launchctl remove com.apple.helpd
+echo "Successful."
+echo "Disabling spindump."
+sudo launchctl remove com.apple.spindump
+echo "Successful."
+echo "Disabling metadata.mds.spindump."
+sudo launchctl remove com.apple.metadata.mds.spindump
+echo "Successful."
+echo "Disabling ftp-proxy."
+sudo launchctl remove com.apple.ftp-proxy
+echo "Successful."
+
+echo "Removing Extra apps."
+echo "Removing Calculator."
+sudo rm -rf /System/Applications/Calculator.app
+echo "Successful."
+echo "Removing Calendar."
+sudo rm -rf /System/Applications/Calendar.app
+echo "Successful."
+echo "Removing Chess."
+sudo rm -rf /System/Applications/Chess.app
+echo "Successful."
+echo "Removing Contacts."
+sudo rm -rf /System/Applications/Contacts.app
+echo "Successful."
+echo "Removing Dictionary."
+sudo rm -rf /System/Applications/Dictionary.app
+echo "Successful."
+echo "Removing DVD Player."
+sudo rm -rf "/System/Applications/DVD Player.app"
+echo "Successful."
+echo "Removing Books."
+sudo rm -rf /System/Applications/Books.app
+echo "Successful."
+echo "Removing Mail."
+sudo rm -rf /System/Applications/Mail.app
+echo "Successful."
+echo "Removing Maps."
+sudo rm -rf /System/Applications/Maps.app
+echo "Successful."
+echo "Removing Messages."
+sudo rm -rf /System/Applications/Messages.app
+echo "Successful."
+echo "Removing Stickies."
+sudo rm -rf /System/Applications/Stickies.app
+echo "Successful."
+
+echo "Rebooting in 3 Seconds."
+sleep 3
+sudo reboot
