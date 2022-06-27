@@ -55,7 +55,7 @@ Tries to not break the OS while keeping it private and secure.
 
 Removes Notes, Reminders, Calculator, Calendar, Find My, Chess, Books, Mail, Messages, Preview, Siri, Contacts, and Dictionary.
 
-*Note:* This will be removed in a future release due to it being near impossible to remove build in applications with most scripts, even while the system is in recovery mode. Use CleanMyMacX for this if needed. It may be a pup from what I have seen, but its pretty much the only option left.
+*Note:* This will be removed in a future release due to it being near impossible to remove applications with most scripts, even while the system is in recovery mode. Use CleanMyMacX for this if needed. It may be a pup from what I have seen, but its pretty much the only option left.
 
 Removes Siri and speech recognition daemons.
 
