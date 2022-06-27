@@ -26,10 +26,10 @@ sudo launchctl remove com.apple.identityservicesd
 sudo launchctl remove com.apple.softwareupdate
 sudo sysctl debug.lowpri_throttle_enabled=0
 
-# This will be removed in a future release due to it being near impossible
-# to remove build in applications with most scripts. 
-# Use CleanMyMacX for this if needed. It may be a pup from what I have seen,
-# but its pretty much the only option left.
+# This will be removed in a future release due to it being near impossible to remove
+# applications with most scripts, even while the system is in recovery mode.
+# Use CleanMyMacX for this if needed.
+# It may be a pup from what I have seen, but its pretty much the only option left.
 echo Removing Extra Applications
 sudo mount -w /
 sudo rm -rf /System/Applications/Calculator.app
