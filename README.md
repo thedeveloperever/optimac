@@ -13,37 +13,9 @@ MacOS Versions tested: 10.10, 10.11, 10.13, 10.14, 11.0, 12.0
 | Booting: 2 Minutes                      | Booting: 15 seconds      |
 | Login to desktop: 30 to 60 seconds      | Login to desktop: 5-10s  |
 
-# *How to use:*
+# SEE INSTALLATION.md BELOW!
 
-*Note:* (SIP is only in MacOS 10.11 El Capitan and newer, but only 10.13+ block most of the script.)
-
-Make sure to turn off SIP or System Integrity Protection! 
-There are many tutorials, and this script is meant to be run on a live system, not recovery.
-
-Find Terminal.
-
-Click it and do the following commands:
-
-```
-cd Downloads/macosdebloater-scripts
-```
-```
-chmod 777 *-macos-versions-debloat
-```
-```
-./old-macos-versions-debloat
-```
-
-OR
-
-```
-./new-macos-versions-debloat
-```
-
-*Note:* Replace "Downloads/macosdebloater-scripts" with the file you downloaded.
-
-
-You are all done! After it finishes, it will automatically reboot for you. You now have a debloated MacOS system!
+[Installation Guide](/docs/INSTALLATION.md)
 
 # *Features:*
 
@@ -52,13 +24,6 @@ Keeps All iCloud and security services, so you can even run it on your business 
 Keeps security patches.
 
 Tries to not break the OS while keeping it private and secure.
-
-*REMOVING IN A FUTURE RELEASE*
-
-Removes Notes, Reminders, Calculator, Calendar, Find My, Chess, Books, Mail, Messages, Preview, Siri, Contacts, and Dictionary.
-
-
-Removes Siri and speech recognition daemons.
 
 Removes spindump. (crash reporting)
 
