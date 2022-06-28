@@ -10,6 +10,10 @@
 
 - Spindump
 
+- FTP
+
+- Call History
+
 # About this project.
 
 This Project was started by me in April 2021 because I was sick and tired of bad MacOS performance on older hardware.
