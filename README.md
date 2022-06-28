@@ -1,7 +1,5 @@
 # MacOS Debloater
 
-*This is a project that allows you to save space and speed up your Mac!*
-
 The MacOS debloater is an open source alternative to most
 
 big name apps which usually don't even improve speed.
