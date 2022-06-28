@@ -1,5 +1,7 @@
 # How can I debloat my system?
 
+*Note: You need SIP to be turned off.*
+
 The way you install this is simple.
 
 Click the green button that says "Code" with an arrow, then click Download ZIP.
