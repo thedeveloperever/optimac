@@ -1,4 +1,4 @@
-# What does this script remove?
+# What does this script disable?
 
 - FileVault
 
