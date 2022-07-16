@@ -24,6 +24,24 @@ chmod +x macos-debloater
 
 The Computer will then interpret and run the script, and your system will automatically reboot.
 
-# Look at the about section below for a list of RAM and CPU saving features, and the reason I made this.
+# What does this script disable?
 
-[List of disabled features and about this project.](/docs/ABOUT.md)
+- FileVault
+
+- Crash reporting
+
+- Telemetry
+
+- Location services
+
+- Spindump
+
+- FTP
+
+- Call History
+
+# About this project.
+
+This project was started by me in April 2021 because I was sick of bad MacOS performance on older hardware.
+
+Newer versions of MacOS are getting harder to tweak though.
