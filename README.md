@@ -8,9 +8,7 @@
 
 Click the green button that says "Code" with an arrow, then click Download ZIP.
 
-Then you want to open your terminal.
-
-Type the following commands.
+Then you want to open your terminal and the following commands.
 
 ```
 cd Downloads/
@@ -43,3 +41,5 @@ The Computer will then run the script, and your system will reboot.
 This project was started by me in April 2021 because I was sick of bad MacOS performance on older hardware.
 
 Newer versions of MacOS are getting harder to tweak though.
+
+*This project is licensed under the MIT Licence.*
