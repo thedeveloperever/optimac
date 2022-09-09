@@ -12,9 +12,14 @@ echo "Success."
 
 echo "Disabling the SMB protocol."
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+touch /etc/nsmb.conf
+echo "[default]" | sudo tee -a /etc/nsmb.conf
+echo "protocol_vers_map=6" | sudo tee -a /etc/nsmb.conf
+echo "port445=no_netbios" | sudo tee -a /etc/nsmb.conf
+echo "smb_neg=smb2_only" | sudo tee -a /etc/nsmb.conf
 echo "Success."
 
-echo "Disabling Crash Reporting, Call History, Diagnostics, FTP, Spindump, Helpd, and Location Services." 
+echo "Disabling Crash Reporting, Diagnostics, FTP, Spindump, Helpd, and Location Services." 
 SERVICES="com.apple.geod com.apple.helpd com.apple.spindump com.apple.ftp-proxy com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
 for val in ${SER[*]}
 do
