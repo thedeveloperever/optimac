@@ -13,9 +13,13 @@ Then you want to open your terminal and the following commands.
 ```
 cd Downloads/
 
-chmod +x macos-debloater
+unzip macosdebloater-main.zip
 
-./macos-debloater
+cd macosdebloater-main
+
+chmod +x macos-debloater.sh
+
+./macos-debloater.sh
 ```
 
 The Computer will then run the script, and your system will reboot.
