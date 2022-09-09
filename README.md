@@ -22,8 +22,6 @@ The Computer will then run the script, and your system will reboot.
 
 # What does this script disable?
 
-- FileVault
-
 - Crash reporting
 
 - Telemetry
@@ -34,7 +32,7 @@ The Computer will then run the script, and your system will reboot.
 
 - FTP
 
-- Call History
+- SMB1
 
 # About this project.
 
