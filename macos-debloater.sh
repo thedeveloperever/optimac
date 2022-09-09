@@ -24,9 +24,9 @@ SERVICES="com.apple.geod com.apple.helpd com.apple.spindump com.apple.ftp-proxy 
 for val in ${SER[*]}
 do
   sudo launchctl disable $val
-  echo "Success."
 done
+echo "Success."
 
-echo "Rebooting in 3 Seconds."
-sleep 3
+echo "Rebooting in 5 Seconds."
+sleep 5
 sudo reboot
