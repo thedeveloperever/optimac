@@ -15,8 +15,6 @@ echo "Removing log files."
 sudo rm -rf /private/var/log/*.log
 sudo rm -rf /private/var/log/asl/*.asl
 
-echo "
-
 echo "Disabling the SMB protocol."
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 touch /etc/nsmb.conf
