@@ -9,11 +9,12 @@ sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 sudo defaults write com.apple.Dock autohide-delay -float 0
 sudo defaults write QLPanelAnimationDuration -float 0
 killall dock
-echo "Success."
+echo "[Complete] Disabled animations."
 
 echo "Removing log files."
 sudo rm -rf /private/var/log/*.log
 sudo rm -rf /private/var/log/asl/*.asl
+echo "[Complete] Deleted Terminal logs."
 
 echo "Disabling the SMB protocol."
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
@@ -22,17 +23,18 @@ echo "[default]" | sudo tee -a /etc/nsmb.conf
 echo "protocol_vers_map=6" | sudo tee -a /etc/nsmb.conf
 echo "port445=no_netbios" | sudo tee -a /etc/nsmb.conf
 echo "smb_neg=smb2_only" | sudo tee -a /etc/nsmb.conf
-echo "Success."
+echo "[Complete] Disabled SMB."
 
-echo "Disabling Crash Reporting, Diagnostics, FTP, Spindump, Helpd, and Location Services." 
-SERVICES="com.apple.analyticsd com.apple.VoiceOver com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.ftp-proxy com.apple.TrustEvaluationAgent com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
-for service in ${SERVICES[*]}
-do
-  sudo launchctl disable $SERVICE
-  echo "[Complete] Disabled $SERVICE."
+echo "Disabling Crash Reporting, Diagnostics, FTP, Spindump, Helpd, and Location Services."
+DAE="com.apple.analyticsd com.apple.VoiceOver com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod 
+com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.ftp-proxy com.apple.TrustEvaluationAgent com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic 
+com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
+for val in $DAE; do
+  sudo launchctl disable system/$val
+  launchctl disable system/$val
 done
-echo "Success."
+echo "[Complete] Disabled useless services."
 
-echo "Rebooting in 5 Seconds."
-sleep 5
+echo "[Complete] Your system is now slimmed down. Rebooting in 3 seconds."
+sleep 3
 sudo reboot
