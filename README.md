@@ -6,9 +6,9 @@
 
 *Note: You need SIP to be turned off.*
 
-Click the green button that says "Code" with an arrow, then click Download ZIP.
+*Also, I try to make commits stable and they go through testing.*
 
-I try to make commits stable and they go through testing anyways.
+Click the green button that says "Code" with an arrow, then click Download ZIP.
 
 Then you want to open your terminal and the following commands.
 
