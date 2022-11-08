@@ -11,11 +11,6 @@ sudo defaults write QLPanelAnimationDuration -float 0
 killall dock
 echo "[Complete] Disabled animations."
 
-echo "Removing log files."
-sudo rm -rf /private/var/log/*.log
-sudo rm -rf /private/var/log/asl/*.asl
-echo "[Complete] Deleted Terminal logs."
-
 echo "Disabling the SMB protocol."
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 touch /etc/nsmb.conf
@@ -31,7 +26,6 @@ com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.a
 com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
 for val in $DAE; do
   sudo launchctl disable system/$val
-  launchctl disable system/$val
 done
 echo "[Complete] Disabled useless services."
 
