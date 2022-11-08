@@ -6,7 +6,7 @@
 
 *Note: You need SIP to be turned off.*
 
-*Also, I try to make commits stable and they go through testing.*
+*Also, I try to make commits stable, plus they go through testing.*
 
 Click the green button that says "Code" with an arrow, then click Download ZIP.
 
