@@ -8,6 +8,8 @@
 
 Click the green button that says "Code" with an arrow, then click Download ZIP.
 
+I try to make commits stable and they go through testing anyways.
+
 Then you want to open your terminal and the following commands.
 
 ```
@@ -24,6 +26,14 @@ chmod +x macos-debloater.sh
 
 The Computer will then run the script, and your system will reboot.
 
+# Coming soon
+
+- Remove default apps
+
+- Remove Notification Center
+
+- Remove unwanted "antivirus" or "cleaning" software
+
 # What does this script disable?
 
 - Crash reporting
@@ -38,10 +48,18 @@ The Computer will then run the script, and your system will reboot.
 
 - SMB1
 
+- SMB2
+
+- Location Services
+
+- Siri
+
+- Facial recognition in media
+
+- NetBIOS
+
 # About this project.
 
 This project was started by me in April 2021 because I was sick of bad MacOS performance on older hardware.
-
-Newer versions of MacOS are getting harder to tweak though.
 
 *This project is licensed under the MIT Licence.*
