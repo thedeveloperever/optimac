@@ -29,6 +29,4 @@ for val in $DAE; do
 done
 echo "[Complete] Disabled useless services."
 
-echo "[Complete] Your system is now slimmed down. Rebooting in 3 seconds."
-sleep 3
-sudo reboot
+echo "[Complete] Your system is now slimmed down. Please reboot soon."
