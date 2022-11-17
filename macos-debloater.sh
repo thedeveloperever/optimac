@@ -13,7 +13,7 @@ echo "[Complete] Disabled animations."
 
 echo "Disabling the SMB protocol."
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
-touch /etc/nsmb.conf
+sudo touch /etc/nsmb.conf
 echo "[default]" | sudo tee -a /etc/nsmb.conf
 echo "protocol_vers_map=6" | sudo tee -a /etc/nsmb.conf
 echo "port445=no_netbios" | sudo tee -a /etc/nsmb.conf
