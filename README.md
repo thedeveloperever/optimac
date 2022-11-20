@@ -24,7 +24,7 @@ chmod +x macos-debloater.sh
 ./macos-debloater.sh
 ```
 
-The Computer will then run the script, and your system will reboot.
+The Computer will then run the script. You will need to reboot your system manually.
 
 # Coming soon
 
