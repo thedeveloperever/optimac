@@ -30,8 +30,6 @@ The Computer will then run the script. You will need to reboot your system manua
 
 - Remove default apps
 
-- Remove Notification Center
-
 - Remove unwanted "antivirus" or "cleaning" software
 
 # What does this script disable?
