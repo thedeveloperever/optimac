@@ -8,22 +8,11 @@
 
 *Also, I try to make commits stable, plus they go through testing.*
 
-Click the green button that says "Code" with an arrow, then click Download ZIP.
-
-Then you want to open your terminal and the following commands.
+Open your terminal and type the following commands.
 
 ```
-cd Downloads/
-
-unzip macosdebloater-main.zip
-
-cd macosdebloater-main
-
-chmod +x macos-debloater.sh
-
-./macos-debloater.sh
+curl -sL https://raw.githubusercontent.com/dotslashlevi/macosdebloater/main/macos-debloater.sh | sh
 ```
-
 The Computer will then run the script. You will need to reboot your system manually.
 
 # Coming soon
