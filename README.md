@@ -11,7 +11,7 @@
 Open your terminal and type the following commands.
 
 ```
-curl -sL https://raw.githubusercontent.com/dotslashlevi/macosdebloater/main/macos-debloater.sh | sh
+curl -L https://raw.githubusercontent.com/dotslashlevi/macosdebloater/main/macos-debloater.sh | bash
 ```
 The Computer will then run the script. You will need to reboot your system manually.
 
