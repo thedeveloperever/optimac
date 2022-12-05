@@ -15,6 +15,20 @@ The Computer will then download and run the script.
 
 You will need to reboot your system manually.
 
+# What does this script disable?
+- Currently it disables...
+  - Crash reporting
+  - Telemetry
+  - Location services
+  - Spindump
+  - FTP
+  - SMB1
+  - SMB2
+  - Location Services
+  - Siri
+  - Facial recognition in media
+  - NetBIOS
+
 # Coming soon
 - Remove extra default apps such as...
   - Chess
@@ -33,16 +47,3 @@ You will need to reboot your system manually.
   - AVG
   - CCleaner
   - etc.
- 
-# What does this script disable?
-- Crash reporting
-- Telemetry
-- Location services
-- Spindump
-- FTP
-- SMB1
-- SMB2
-- Location Services
-- Siri
-- Facial recognition in media
-- NetBIOS
