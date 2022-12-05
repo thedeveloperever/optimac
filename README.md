@@ -34,11 +34,11 @@ Do it as soon as possible.
   - etc.
 
 - Remove closed source "cleaning software" because these apps can make your computer slower. For example, theres no point in cleaning your cache and RAM.
- - CleanMyMacX
- - AVG
- - Drive Genius
- - CCleaner
- - etc.
+  - CleanMyMacX
+  - AVG
+  - Drive Genius
+  - CCleaner
+  - etc.
  
 # What does this script disable?
 - Crash reporting
