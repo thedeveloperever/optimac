@@ -1,6 +1,7 @@
-# OptiMac - Formerly MacOS-Debloater
+# OptiMac
 
-*OptiMac is an open source alternative to most big name apps which usually don't even improve speed.*
+*OptiMac is an open source alternative to most big name apps which usually don't even improve speed. Formerly MacOS-Debloater*
+
 
 # How can I debloat my system?
 
