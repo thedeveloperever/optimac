@@ -21,7 +21,7 @@ Do it as soon as possible.
 
 # Coming soon
 
-- Remove extra default apps 
+- Remove extra default apps such as...
   - Chess
   - Photos 
   - Books
@@ -33,10 +33,9 @@ Do it as soon as possible.
   - DVD Player
   - etc.
 
-- Remove closed source "cleaning software" because these apps can make your computer slower. For example, theres no point in cleaning your cache and RAM.
+- Remove closed source "cleaning software" because these apps can make your computer slower. Removes apps such as...
   - CleanMyMacX
   - AVG
-  - Drive Genius
   - CCleaner
   - etc.
  
