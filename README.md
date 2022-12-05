@@ -1,11 +1,12 @@
 # OptiMac
-*OptiMac is an open source alternative to most big name apps which usually don't even improve speed. Formerly MacOS-Debloater*
+*OptiMac is an open source alternative to most big name apps which usually don't even improve speed. Formerly MacOS-Debloater.*
 
+*This project was started by me in 2021, as I was sick of bad MacOS performance on old hardware. It's licensed under the MIT License.*
 
 # How can I optimize my system?
 *Note: You need SIP to be turned off.*
 
-Open your terminal and type the following commands.
+Open your terminal and type the following.
 
 ```
 curl -L https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | bash
@@ -13,8 +14,6 @@ curl -L https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh |
 The Computer will then download and run the script.
 
 You will need to reboot your system manually.
-
-Do it as soon as possible.
 
 # Coming soon
 - Remove extra default apps such as...
@@ -47,6 +46,3 @@ Do it as soon as possible.
 - Siri
 - Facial recognition in media
 - NetBIOS
-
-# About this project.
-This project was started by me in 2021, as I was sick of bad MacOS performance on old hardware. It's licensed under the MIT License.
