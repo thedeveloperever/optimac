@@ -1,13 +1,9 @@
 # OptiMac
-
 *OptiMac is an open source alternative to most big name apps which usually don't even improve speed. Formerly MacOS-Debloater*
 
 
-# How can I debloat my system?
-
+# How can I optimize my system?
 *Note: You need SIP to be turned off.*
-
-*Also, I try to make commits stable. They also go through testing.*
 
 Open your terminal and type the following commands.
 
@@ -21,7 +17,6 @@ You will need to reboot your system manually.
 Do it as soon as possible.
 
 # Coming soon
-
 - Remove extra default apps such as...
   - Chess
   - Photos 
@@ -54,5 +49,4 @@ Do it as soon as possible.
 - NetBIOS
 
 # About this project.
-
 This project was started by me in 2021, as I was sick of bad MacOS performance on old hardware. It's licensed under the MIT License.
