@@ -1,4 +1,4 @@
-# OptiMac
+# OptiMac - Formerly MacOS-Debloater
 
 *OptiMac is an open source alternative to most big name apps which usually don't even improve speed.*
 
