@@ -28,7 +28,7 @@ You will need to reboot your system manually.
   - DVD Player
   - etc.
 
-- Remove closed source "cleaning software" because these apps can make your computer slower. Removes apps such as...
+- Remove closed source "cleaning software" such as...
   - CleanMyMacX
   - AVG
   - CCleaner
