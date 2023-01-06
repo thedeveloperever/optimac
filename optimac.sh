@@ -29,4 +29,9 @@ for val in $DAE; do
 done
 echo "[Complete] Disabled useless services."
 
+echo "Removing extra DMG files and partially downloaded files."
+sudo rm /Users/$(whoami)/Downloads/*.dmg
+sudo rm /Users/$(whoami)/Downloads/*.crdownload
+sudo rm /Users/$(whoami)/Downloads/*.part
+
 echo "[Complete] Your system is now slimmed down. Please reboot soon."
