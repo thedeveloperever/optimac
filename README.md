@@ -29,4 +29,4 @@ The Computer will then download and run the script. Reboot ASAP.
 
 # Coming soon
 - Remove bloated cleaning software
-  - (clearing your caches doesn't do jack)
+  - (clearing your caches makes your computer slower)
