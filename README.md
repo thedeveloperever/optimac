@@ -10,7 +10,6 @@ Open your terminal and type the following.
 ```
 The Computer will then download and run the script. Reboot ASAP.
 
-# What does this script disable?
 - Currently it disables...
   - Crash reporting
   - Telemetry
@@ -23,6 +22,10 @@ The Computer will then download and run the script. Reboot ASAP.
   - Siri
   - Facial recognition in media
   - NetBIOS
+  
+- Currently it cleans
+  - Partially downloaded files
+  - Unused DMG files
 
 # Coming soon
 - Remove bloated cleaning software
