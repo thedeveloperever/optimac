@@ -6,7 +6,7 @@
 
 Open your terminal and type the following.
 ```
-/bin/bash -c ($"https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh")
+curl -sL https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | bash
 ```
 The Computer will then download and run the script. Reboot ASAP.
 
