@@ -1,13 +1,19 @@
 : '
-Optimac.sh
+-= Optimac.sh =-
 Original Author: dotslashlevi on GitHub
-The most up to date open-source macOS deloatation and
-telemetry removal script. This script is designed to disable animations,
-disable the SMB protocol, disable crash reporting, diagnostics, FTP,
-spindump, helpd, and location services, and remove extra DMG files alongside partitally downloaded files.'
+The most up to date open-source macOS debloater and
+telemetry removal script. Please read the README.md to
+ensure you understand what this script does before running.'
 
 #!/bin/bash
-
+:'
+Check is SIP is enabled, if it is echo a message to disable SIP and let them hit any to key exit the script'
+if csrutil status | grep -q "enabled"; then
+  echo "SIP is enabled. Please disable SIP and try again."
+  echo "Visit https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection for more information."
+  read -n 1 -s -r -p "Press any key to exit"
+  exit 1
+fi
 echo "Disabling all animations."
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -44,8 +50,10 @@ sudo rm /Users/$(whoami)/Downloads/*.part
 
 echo "[Complete] Removed extra DMG files and partially downloaded files."
 echo "Disabling automatic update telemetry and cache clearing."
+
 : 'Diable cache clearing in macos montereey'
 sudo defaults write com.apple.SoftwareUpdate AutomaticCacheCleaningDisabled -bool true
+
 : 'Disable automatic update telemetry'
 sudo defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
 sudo defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -int 0
@@ -54,5 +62,8 @@ sudo defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
 sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
 
 echo "[Complete] Disabled automatic update telemetry and cache clearing."
-
 echo "[Complete] Your system is now slimmed down. Please reboot soon."
+
+:'
+Creates a yes/no prompt to reboot'
+read -p "Would you like to reboot now? [y/n] " -n 1 -r
