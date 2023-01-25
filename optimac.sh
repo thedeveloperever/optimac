@@ -6,9 +6,10 @@ Original Author: dotslashlevi on GitHub
 The most up to date open-source macOS debloating and
 telemetry removal script. This script is designed to disable animations,
 disable the SMB protocol, disable crash reporting, diagnostics, FTP,
-spindump, helpd, and location services, and remove extra DMG files alongside partitally downloaded files.'
+spindump, helpd, and location services.'
 
 echo "Disabling all animations."
+: 'Disables all finder animations, window animations, the docks launch animation, and  change the animation lengths.'
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 sudo defaults write com.apple.dock launchanim -bool false
@@ -32,27 +33,21 @@ for val in $DAE; do
 done
 echo "[Complete] Disabled useless services."
 
-echo "Removing extra DMG files and partially downloaded files."
-sudo rm /Users/$(whoami)/Downloads/*.dmg
-sudo rm /Users/$(whoami)/Downloads/*.crdownload
-echo "[Complete] Removed extra DMG files and partially downloaded files."
-
 echo "Disabling automatic update telemetry and cache clearing."
-: 'Diable cache clearing in macos montereey'
+: 'Diable cache clearing in Macos Monterey and newer'
+: 'Disable automatic updates using defaults write.'
 sudo defaults write com.apple.SoftwareUpdate AutomaticCacheCleaningDisabled -bool true
-
-: 'Disable automatic update telemetry'
 sudo defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
 sudo defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -int 0
 sudo defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 0
 sudo defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
 sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
-echo "[Complete] Disabled automatic update telemetry and cache clearing."
+echo "[Complete] Disabled automatic updates and cache clearing."
 
 echo "[Complete] Script complete."
 
-: 'Creates a yes/no prompt to reboot'
-read -p "(y/N) Reboot now? " yn
+: 'Creates a yes/no prompt to reboot using if, else, and then'
+read -e -p "(y/N) Reboot now? " yn
 if [ "$yn" = "y" ]; then
   sleep 3
   echo "Rebooting..."
