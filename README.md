@@ -22,11 +22,10 @@ The Computer will then download and run the script. Reboot ASAP.
   - Siri
   - Facial recognition in media
   - NetBIOS
-  
+
 - Currently it cleans
   - Partially downloaded files
   - Unused DMG files
 
-# Coming soon
-- Remove bloated cleaning software
+- Removes bloated cleaning software
   - (clearing your caches makes your computer slower)

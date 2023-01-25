@@ -1,9 +1,9 @@
 #!/bin/bash
 
 : '
-optimac.sh
+Optimac.sh
 Original Author: dotslashlevi on GitHub
-The most up to date open-source macOS debloating and
+The most up to date open-source macOS deloatation and
 telemetry removal script. This script is designed to disable animations,
 disable the SMB protocol, disable crash reporting, diagnostics, FTP,
 spindump, helpd, and location services, and remove extra DMG files alongside partitally downloaded files.'
@@ -38,8 +38,9 @@ sudo rm /Users/$(whoami)/Downloads/*.crdownload
 echo "[Complete] Removed extra DMG files and partially downloaded files."
 
 echo "Disabling automatic update telemetry and cache clearing."
-: 'Diable cache clearing in MacOS Monterey'
+: 'Diable cache clearing in macos montereey'
 sudo defaults write com.apple.SoftwareUpdate AutomaticCacheCleaningDisabled -bool true
+
 : 'Disable automatic update telemetry'
 sudo defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
 sudo defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -int 0
@@ -48,4 +49,8 @@ sudo defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
 sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
 echo "[Complete] Disabled automatic update telemetry and cache clearing."
 
-echo "[Complete] Your system is now optimized. Please reboot soon."
+echo "[Complete] Your system is now slimmed down. Please reboot soon."
+
+:'
+Creates a yes/no prompt to reboot'
+read -p "Would you like to reboot now? [y/n] " -n 1 -r
