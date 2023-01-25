@@ -8,8 +8,6 @@ telemetry removal script. This script is designed to disable animations,
 disable the SMB protocol, disable crash reporting, diagnostics, FTP,
 spindump, helpd, and location services, and remove extra DMG files alongside partitally downloaded files.'
 
-#!/bin/bash
-
 echo "Disabling all animations."
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
