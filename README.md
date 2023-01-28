@@ -15,13 +15,13 @@ The Computer will then download and run the script. Reboot ASAP.
 ### More Info
 
 - Currently it disables...
- - Telemetry
-  - Location services
-  - Crash reporting
-  - Facial recognition in media
- - FTP
- - SMB1
- - NetBIOS
+  - Telemetry
+    - Location services
+    - Crash reporting
+    - Facial recognition in media
+  - FTP
+  - SMB1
+  - NetBIOS
 
 - Soon it will be able to do the following:
   - Clean out unused files in your downloads
