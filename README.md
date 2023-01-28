@@ -23,7 +23,7 @@ The Computer will then download and run the script. Reboot ASAP.
 - SMB1
 - NetBIOS
 
-### Soon it will be able to do the following:
+### Coming soon:
   - Clean out unused files in your downloads
   - Check if SIP is enabled
   - Prompt you to edit the script before running it if you want
