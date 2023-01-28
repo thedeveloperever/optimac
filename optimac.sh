@@ -5,11 +5,10 @@ Optimac.sh
 Original Author: dotslashlevi on GitHub
 The most up to date open-source macOS debloating and
 telemetry removal script. This script is designed to disable animations,
-disable the SMB protocol, disable crash reporting, diagnostics, FTP,
-spindump, helpd, and location services.'
+disable SMB1, disable crash reporting, most kinds of telemetry, FTP, and location services.'
 
 echo "Disabling all animations."
-: 'Disables all finder animations, window animations, the docks launch animation, and  change the animation lengths.'
+: 'Disables all finder animations, window animations, the docks launch animation, and changes the animation lengths.'
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 sudo defaults write com.apple.dock launchanim -bool false
@@ -24,10 +23,8 @@ sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRU
 echo "[Complete] Disabled SMB1."
 
 echo "Disabling extra daemons."
-: 'Disables face recognition in media, crash reporting, analytics, automatic java installation, location services, FTP, and netbios.'
-DAE="com.apple.analyticsd com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.helpd com.apple.helpd.agent com.apple.helpd.agent.
-com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.ftp-proxy com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic
-com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
+: 'Disables facial recognition in media, telemetry, location services, FTP, java installation on demand, and netbios.'
+DAE="com.apple.analyticsd com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.ftp-proxy com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
 for val in $DAE; do
   sudo launchctl disable system/$val
 done
