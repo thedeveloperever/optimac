@@ -12,7 +12,7 @@ The Computer will then download and run the script. Reboot ASAP.
 
 ###### *Note: You need SIP to be turned off.*
 
-### More Info
+# More Info
 
 ### Currently it disables...
 - Telemetry
