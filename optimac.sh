@@ -1,24 +1,24 @@
 #!/bin/bash
 
 : '
-Optimac.sh
-Original Author: dotslashlevi on GitHub
-The most up to date open-source macOS debloating and
+optimac.sh
+Original Author: thenstop on GitHub
+Info: The most up to date open-source macOS debloating and
 telemetry removal script. This script is designed to disable animations,
-disable SMB1, most kinds of telemetry, FTP, and location services.'
+disable SMB1, FTP, location services, and most of the telemetry in MacOS.'
 
 echo "Disabling all animations."
 : 'Disables all finder animations, window animations, the docks launch animation, and changes the animation lengths.'
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 sudo defaults write com.apple.dock launchanim -bool false
-sudo defaults write com.apple.dock expose-animation-duration -float 0.1
+sudo defaults write com.apple.dock expose-animation-duration -float 0.001
 sudo defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 sudo defaults write com.apple.Dock autohide-delay -float 0
 echo "[Complete] Disabled animations."
 
 echo "Disabling the SMB1 protocol."
-: 'Disables the extremely old SMB1 protocol.'
+: 'Disables the extremely insecure SMB1 protocol.'
 sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 echo "[Complete] Disabled SMB1."
 
@@ -30,18 +30,15 @@ for val in $DAE; do
 done
 echo "[Complete] Disabled useless services."
 
-echo "Disabling automatic update telemetry and cache clearing."
-: 'Diable cache clearing in Macos Monterey and newer'
+echo "Disabling automatic updates."
 : 'Disable automatic updates using defaults write.'
-sudo defaults write com.apple.SoftwareUpdate AutomaticCacheCleaningDisabled -bool true
-sudo defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
-sudo defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -int 0
-sudo defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 0
-sudo defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
-sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
+UPDATES="AutomaticDownload AutomaticCheckEnabled CriticalUpdateInstall ConfigDataInstall"
+for val in $UPDATES; do
+  sudo defaults write com.apple.SoftwareUpdate $val -int 0
+done
 echo "[Complete] Disabled automatic updates and cache clearing."
 
-echo "[Complete] Script complete."
+clear
 
 : 'Creates a yes/no prompt to reboot using if, else, and then'
 read -e -p "(y/N) Reboot now? " yn
