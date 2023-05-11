@@ -1,16 +1,13 @@
 # OptiMac
-*OptiMac is an open source alternative to most big name apps which "improve speed"*
-###### *Formerly MacOS-Debloater*
+*OptiMac is an open source alternative to most big name apps which "improve speed - Formerly MacOS-Debloater*
 
 ### How can I optimize my system?
 
-#### Open your terminal and type the following.
+#### Open your terminal and type the following. - You need SIP OFF
 ```
 curl -sL https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | bash
 ```
-The Computer will then download and run the script. Reboot ASAP.
-
-###### *Note: You need SIP to be turned off.*
+The Computer will then download and run the script.
 
 # More Info
 
@@ -19,12 +16,16 @@ The Computer will then download and run the script. Reboot ASAP.
   - Location services
   - Crash reporting
   - Facial recognition in media
-- FTP
+- Update Features
+  - Automatic downloading
+  - Automatic checking
+  - Automatic installs
 - SMB1
+  - Old insecure protocol
 - NetBIOS
+  - Old insecure protocol
 
 ### Coming soon:
   - Clean out unused files in your downloads
   - Check if SIP is enabled
   - Prompt you to edit the script before running it if you want
-  - and more...
