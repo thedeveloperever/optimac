@@ -5,7 +5,7 @@ optimac.sh
 Original Author: thenstop on GitHub
 Info: The most up to date open-source macOS debloating and
 telemetry removal script. This script is designed to disable animations,
-disable SMB1, FTP, location services, and most of the telemetry in MacOS.'
+disable SMB1, location services, and most of the telemetry in MacOS.'
 
 echo "Disabling all animations."
 : 'Disables all finder animations, window animations, the docks launch animation, and changes the animation lengths.'
