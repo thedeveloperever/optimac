@@ -1,5 +1,5 @@
 # OptiMac
-*OptiMac is an open source alternative to most big name apps which "improve speed - Formerly MacOS-Debloater*
+*OptiMac is an open source alternative to most big name apps which "improve speed" - Formerly MacOS-Debloater*
 
 ### How can I optimize my system?
 
