@@ -23,8 +23,8 @@ sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRU
 echo "[Complete] Disabled SMB1."
 
 echo "Disabling extra daemons."
-: 'Disables facial recognition in media, telemetry, location services, java installation on demand, and netbios.'
-DAE="com.apple.analyticsd com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
+: 'Disables facial recognition in media, telemetry, location services, java installation on demand, telnet, ftp, and netbios.'
+DAE="com.apple.telnetd com.apple.tftpd com.apple.ftp-proxy com.apple.analyticsd com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
 for val in $DAE; do
   sudo launchctl disable system/$val
 done
