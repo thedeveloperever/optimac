@@ -1,9 +1,9 @@
 # OptiMac
-*OptiMac is an open source alternative to most big name apps which "improve speed" - Formerly MacOS-Debloater*
+*OptiMac is an open source alternative to most big name apps which "improve speed"*
 
-### How can I optimize my system?
+## How can I optimize my system?
 
-#### Open your terminal and type the following. - You need SIP OFF
+### Open your terminal and type the following. - You need SIP OFF
 ```
 curl -sL https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | bash
 ```
@@ -23,6 +23,10 @@ The Computer will then download and run the script.
 - SMB1
   - Old insecure protocol
 - NetBIOS
+  - Old insecure protocol
+- TFTP
+  - Old insecure protocol
+- Telnet
   - Old insecure protocol
 
 ### Coming soon:
