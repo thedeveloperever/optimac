@@ -1,7 +1,5 @@
-# OptiMac
+# OptiMac 💻
 *OptiMac is an open source alternative to most big name apps which "improve speed"*
-
-## How can I optimize my system?
 
 ### Open your terminal and type the following. - You need SIP OFF
 ```
@@ -16,20 +14,17 @@ The Computer will then download and run the script.
   - Location services
   - Crash reporting
   - Facial recognition in media
+- Automatic Java installation
+  - You can get a better JDK manually
 - Update Features
   - Automatic downloading
-  - Automatic checking
   - Automatic installs
-- SMB1
-  - Old insecure protocol
-- NetBIOS
-  - Old insecure protocol
-- TFTP
-  - Old insecure protocol
-- Telnet
-  - Old insecure protocol
+- SMB1, NetBIOS, Telnet
+  - Old insecure protocols
+- Files
+  - Recent files
+  - Suggested files
 
 ### Coming soon:
   - Clean out unused files in your downloads
   - Check if SIP is enabled
-  - Prompt you to edit the script before running it if you want
