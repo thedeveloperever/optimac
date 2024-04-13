@@ -8,7 +8,7 @@ The Computer will then download and run the script.
 
 # More Info
 
-### Currently it disables...
+### Disables
 - Telemetry
   - Disables location services
   - Disables crash reporting
@@ -22,5 +22,12 @@ The Computer will then download and run the script.
   - Disables recent files
   - Disables Suggested files
 
+### Disables
+- Extra files in ~/Downloads
+  - ISO files
+  - DMG files
+  - APP files
+  - PKG files
+
 ### Coming soon:
-  - Clean out unused files in your downloads
+  - Thinking of features to add, create a suggestion issue if you find any!
