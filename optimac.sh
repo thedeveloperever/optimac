@@ -11,6 +11,10 @@ else
     sleep 1
 fi
 
+echo "Cleaning out downloads folder. (deletes ISO, DMG, PKG, and APP Files)"
+cd ~/Downloads
+sudo rm -rf *.{ISO, DMG, PKG, APP}
+
 echo "Disabling all animations."
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write com.apple.Dock launchanim -bool false
