@@ -22,7 +22,7 @@ The Computer will then download and run the script.
   - Disables recent files
   - Disables Suggested files
 
-### Disables
+### Deletes
 - Extra files in ~/Downloads
   - ISO files
   - DMG files
