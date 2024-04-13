@@ -1,5 +1,17 @@
 #!/bin/bash
 
+sipstatus=$(csrutil status)
+
+# Check if the output contains "Enabled"
+if [[ "$sipstatus" == *"enabled"* ]]; then
+    echo "Please disable SIP in order to continue."
+    sleep 3
+    exit
+else
+    echo "SIP is disabled, Continuing script."
+    sleep 1
+fi
+
 echo "Disabling all animations."
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
 sudo defaults write com.apple.Dock launchanim -bool false
