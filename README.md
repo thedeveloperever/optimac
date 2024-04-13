@@ -1,5 +1,4 @@
 # OptiMac 💻
-*OptiMac is an open source alternative to most big name apps which "improve speed"*
 
 ### Open your terminal and type the following. - You need SIP OFF
 ```
@@ -11,20 +10,17 @@ The Computer will then download and run the script.
 
 ### Currently it disables...
 - Telemetry
-  - Location services
-  - Crash reporting
-  - Facial recognition in media
-- Automatic Java installation
-  - You can get a better JDK manually
+  - Disables location services
+  - Disables crash reporting
+  - Disables facial recognition in media
 - Update Features
-  - Automatic downloading
-  - Automatic installs
+  - Configures Automatic downloading
+  - Configures Automatic installs
 - SMB1, NetBIOS, Telnet
-  - Old insecure protocols
+  - Disables these old insecure protocols
 - Files
-  - Recent files
-  - Suggested files
+  - Disables recent files
+  - Disables Suggested files
 
 ### Coming soon:
   - Clean out unused files in your downloads
-  - Check if SIP is enabled
