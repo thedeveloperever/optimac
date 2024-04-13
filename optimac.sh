@@ -2,7 +2,6 @@
 
 sipstatus=$(csrutil status)
 
-# Check if the output contains "Enabled"
 if [[ "$sipstatus" == *"enabled"* ]]; then
     echo "Please disable SIP in order to continue."
     sleep 3
