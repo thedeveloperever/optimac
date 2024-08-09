@@ -2,18 +2,19 @@
 
 sipstatus=$(csrutil status)
 
-if [[ "$sipstatus" == *"enabled"* ]]; then
+if [[ $sipstatus == "System Integrity Protection status: enabled." ]]; then
     echo "Please disable SIP in order to continue."
-    sleep 3
+    sleep 1
     exit
 else
     echo "SIP is disabled, Continuing script."
     sleep 1
 fi
 
-echo "Cleaning out downloads folder. (deletes ISO, DMG, PKG, and APP Files)"
+echo "Cleaning out downloads folder. (Deletes DMG, PKG, and APP Files)"
 cd ~/Downloads
-sudo rm -rf *.{ISO, DMG, PKG, APP}
+sudo rm -rf *.{DMG, PKG, APP}
+echo "[Complete] Deleted useless installer files."
 
 echo "Disabling all animations."
 sudo defaults write com.apple.finder DisableAllAnimations -bool true
@@ -34,11 +35,11 @@ done
 echo "[Complete] Disabled useless services and telemetry."
 
 echo "Disabling automatic updates to prevent reverting the script. You still can update manually."
-UPDATES="AutomaticDownload AutomaticCheckEnabled CriticalUpdateInstall ConfigDataInstall"
+UPDATES="AutomaticDownload AutomaticCheckEnabled"
 for val in $UPDATES; do
   sudo defaults write com.apple.SoftwareUpdate $val -int 0
 done
-echo "[Complete] Disabled automatic updates and cache clearing."
+echo "[Complete] Disabled automatic updates."
 clear
 
 read -e -p "(y/N) Reboot now? " yn
