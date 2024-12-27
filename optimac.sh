@@ -11,11 +11,6 @@ else
     sleep 1
 fi
 
-if [[ $EUID -ne 0 ]]; then
-    echo "This script requires root. Please enter your password or press CTRL-C if you do not consent."
-    exec sudo "$0" "$@"
-fi
-
 echo "Disabling all animations."
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
