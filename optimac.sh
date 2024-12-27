@@ -70,6 +70,3 @@ else
     echo "Defaulting to no. Script closing..."
     exit 0
 fi
-
-echo "Exiting root..."
-exit
