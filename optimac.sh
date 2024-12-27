@@ -11,14 +11,10 @@ else
     sleep 1
 fi
 
-echo "We ask permission for root access in order to optimize your system. If you don't consent press CTRL-C.
-echo "Starting in 3"
-sleep 1
-echo "Starting in 2"
-sleep 1
-echo "Starting in 1"
-sleep 1
-sudo -i
+if [[ $EUID -ne 0 ]]; then
+    echo "This script requires root. Please enter your password or press CTRL-C if you do not consent."
+    exec sudo "$0" "$@"
+fi
 
 echo "Disabling all animations."
 defaults write com.apple.finder DisableAllAnimations -bool true
