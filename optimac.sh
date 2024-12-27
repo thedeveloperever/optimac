@@ -11,44 +11,68 @@ else
     sleep 1
 fi
 
-echo "Cleaning out downloads folder. (Deletes DMG, PKG, and APP Files)"
-cd ~/Downloads
-sudo rm -rf *.{DMG, PKG, APP}
-echo "[Complete] Deleted useless installer files."
+echo "We ask permission for root access in order to optimize your system. If you don't consent press CTRL-C.
+echo "Starting in 3"
+sleep 1
+echo "Starting in 2"
+sleep 1
+echo "Starting in 1"
+sleep 1
+sudo -i
 
 echo "Disabling all animations."
-sudo defaults write com.apple.finder DisableAllAnimations -bool true
-sudo defaults write com.apple.Dock launchanim -bool false
-sudo defaults write com.apple.Dock autohide-delay -int 0
+defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.Dock launchanim -bool false
+defaults write com.apple.Dock autohide-delay -int 0
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
 echo "[Complete] Disabled animations."
 
 echo "Disabling the SMB1 protocol."
-sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 echo "[Complete] Disabled the SMB1 protocol."
+
+echo "Disabling search indexing."
+mdutil -i off -a
+echo "[Complete] Disabled search indexing."
+
+echo "Disabling automatic app startup."
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+echo "[Complete] Disabled automatic app startup."
+
+echo "Disabling hidden library folder."
+chflags nohidden ~/Library
+echo "[Complete] Disabled hidden library folder."
 
 echo "Disabling useless services and telemetry."
 DAE="com.apple.telnetd com.apple.tftpd com.apple.ftp-proxy com.apple.analyticsd com.apple.amp.mediasharingd com.apple.mediaanalysisd com.apple.mediaremoteagent com.apple.photoanalysisd com.apple.java.InstallOnDemand com.apple.voicememod com.apple.geod com.apple.locate com.apple.locationd com.apple.netbiosd com.apple.recentsd com.apple.suggestd com.apple.spindump com.apple.metadata.mds.spindump com.apple.ReportPanic com.apple.ReportCrash com.apple.ReportCrash.Self com.apple.DiagnosticReportCleanup"
 for val in $DAE; do
-  sudo launchctl disable system/$val
-  launchctl disable system/$val
+    launchctl disable system/$val
 done
 echo "[Complete] Disabled useless services and telemetry."
 
 echo "Disabling automatic updates to prevent reverting the script. You still can update manually."
 UPDATES="AutomaticDownload AutomaticCheckEnabled"
 for val in $UPDATES; do
-  sudo defaults write com.apple.SoftwareUpdate $val -int 0
+    defaults write com.apple.SoftwareUpdate $val -int 0
 done
 echo "[Complete] Disabled automatic updates."
 clear
 
-read -e -p "(y/N) Reboot now? " yn
-if [ "$yn" = "y" ]; then
-  echo "Rebooting..."
-  sleep 3
-  sudo reboot
+read -p "Do you want to reboot? (y/N): " yn
+
+if [[ "$yn" == "y" || "$yn" == "Y" ]]; then
+    echo "Rebooting the system..."
+    reboot
+elif [[ "$yn" == "n" || "$yn" == "N" ]]; then
+    echo "Script closing..."
+    exit 0
 else
-  echo "Defaulting to no."
-  Sleep 3
-  exit
+    echo "Defaulting to no. Script closing..."
+    exit 0
 fi
+
+echo "Exiting root..."
+exit
