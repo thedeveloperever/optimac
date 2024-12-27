@@ -2,7 +2,7 @@
 
 ### Open your terminal and type the following. - You need SIP OFF
 ```
-curl -sL https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | bash
+curl -sL https://raw.githubusercontent.com/dotslashlevi/optimac/main/optimac.sh | sudo bash
 ```
 The Computer will then download and run the script.
 
