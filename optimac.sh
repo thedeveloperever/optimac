@@ -61,7 +61,8 @@ done
 echo "[Complete] Disabled automatic updates."
 clear
 
-read -p "Do you want to reboot? (y/N): " yn
+echo -n "Do you want to reboot? (y/N): "
+read yn
 
 if [[ "$yn" == "y" || "$yn" == "Y" ]]; then
     echo "Rebooting the system..."
